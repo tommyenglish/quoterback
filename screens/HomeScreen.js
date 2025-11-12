@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import QuoteCard from '../src/components/QuoteCard';
-import quotesData from '../src/data/quotes.json';
+import { getRandomQuote } from '../src/services/quoteService';
 
 export default function HomeScreen() {
   const [randomQuote, setRandomQuote] = useState(null);
 
   useEffect(() => {
-    // Select a random quote from the quotes array
-    const randomIndex = Math.floor(Math.random() * quotesData.length);
-    setRandomQuote(quotesData[randomIndex]);
+    // Select a random quote using the quote service
+    setRandomQuote(getRandomQuote());
   }, []);
 
   return (
