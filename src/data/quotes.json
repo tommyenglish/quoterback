@@ -6,7 +6,7 @@
     "topics": ["motivation", "courage"],
     "categories": ["inspiration", "empowerment"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "gradient-blue"
+    "backgroundStyle": "minimal"
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "topics": ["wisdom", "courage"],
     "categories": ["philosophy", "resilience"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "solid-navy"
+    "backgroundStyle": "urban"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "topics": ["success", "courage", "motivation"],
     "categories": ["perseverance", "inspiration"],
     "moods": ["motivated"],
-    "backgroundStyle": "gradient-orange"
+    "backgroundStyle": "urban"
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["gratitude", "contentment"],
     "moods": ["grateful", "peaceful"],
-    "backgroundStyle": "gradient-green"
+    "backgroundStyle": "nature"
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["meditation", "awareness"],
     "moods": ["peaceful", "grateful"],
-    "backgroundStyle": "solid-teal"
+    "backgroundStyle": "minimal"
   },
   {
     "id": "6",
@@ -51,7 +51,7 @@
     "topics": ["courage", "wisdom"],
     "categories": ["mental health", "healing"],
     "moods": ["sad", "anxious"],
-    "backgroundStyle": "gradient-purple"
+    "backgroundStyle": "abstract"
   },
   {
     "id": "7",
@@ -60,7 +60,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["inner peace", "spirituality"],
     "moods": ["peaceful"],
-    "backgroundStyle": "solid-lavender"
+    "backgroundStyle": "minimal"
   },
   {
     "id": "8",
@@ -69,7 +69,7 @@
     "topics": ["success", "motivation", "wisdom"],
     "categories": ["career", "passion"],
     "moods": ["motivated"],
-    "backgroundStyle": "gradient-red"
+    "backgroundStyle": "urban"
   },
   {
     "id": "9",
@@ -78,7 +78,7 @@
     "topics": ["wisdom", "mindfulness"],
     "categories": ["emotions", "self-control"],
     "moods": ["angry"],
-    "backgroundStyle": "solid-crimson"
+    "backgroundStyle": "abstract"
   },
   {
     "id": "10",
@@ -87,7 +87,7 @@
     "topics": ["mindfulness", "motivation"],
     "categories": ["fresh start", "presence"],
     "moods": ["motivated", "peaceful"],
-    "backgroundStyle": "gradient-sunrise"
+    "backgroundStyle": "nature"
   },
   {
     "id": "11",
@@ -96,7 +96,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["gratitude", "abundance"],
     "moods": ["grateful", "peaceful"],
-    "backgroundStyle": "gradient-gold"
+    "backgroundStyle": "nature"
   },
   {
     "id": "12",
@@ -105,7 +105,7 @@
     "topics": ["wisdom"],
     "categories": ["emotions", "healing"],
     "moods": ["sad"],
-    "backgroundStyle": "solid-gray"
+    "backgroundStyle": "abstract"
   },
   {
     "id": "13",
@@ -114,7 +114,7 @@
     "topics": ["courage", "motivation", "wisdom"],
     "categories": ["bravery", "living fully"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "gradient-amber"
+    "backgroundStyle": "urban"
   },
   {
     "id": "14",
@@ -123,7 +123,7 @@
     "topics": ["mindfulness", "courage"],
     "categories": ["self-acceptance", "calm"],
     "moods": ["anxious", "peaceful"],
-    "backgroundStyle": "solid-sky"
+    "backgroundStyle": "minimal"
   },
   {
     "id": "15",
@@ -132,6 +132,6 @@
     "topics": ["wisdom", "courage", "motivation"],
     "categories": ["self-worth", "empowerment"],
     "moods": ["angry", "motivated"],
-    "backgroundStyle": "gradient-violet"
+    "backgroundStyle": "abstract"
   }
 ]
