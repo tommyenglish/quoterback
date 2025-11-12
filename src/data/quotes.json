@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "text": "You got this.",
+    "author": "Anonymous",
+    "topics": ["motivation", "courage"],
+    "categories": ["inspiration", "empowerment"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "gradient-blue"
+  },
+  {
+    "id": "2",
+    "text": "In the middle of difficulty lies opportunity. Every challenge is a chance to grow stronger and wiser.",
+    "author": "Albert Einstein",
+    "topics": ["wisdom", "courage"],
+    "categories": ["philosophy", "resilience"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "solid-navy"
+  },
+  {
+    "id": "3",
+    "text": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "author": "Winston Churchill",
+    "topics": ["success", "courage", "motivation"],
+    "categories": ["perseverance", "inspiration"],
+    "moods": ["motivated"],
+    "backgroundStyle": "gradient-orange"
+  },
+  {
+    "id": "4",
+    "text": "Gratitude turns what we have into enough.",
+    "author": "Melody Beattie",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["gratitude", "contentment"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "gradient-green"
+  },
+  {
+    "id": "5",
+    "text": "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
+    "author": "Thich Nhat Hanh",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["meditation", "awareness"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "solid-teal"
+  },
+  {
+    "id": "6",
+    "text": "It's okay to not be okay. Healing is not linear, and every step forward, no matter how small, is progress.",
+    "author": "Unknown",
+    "topics": ["courage", "wisdom"],
+    "categories": ["mental health", "healing"],
+    "moods": ["sad", "anxious"],
+    "backgroundStyle": "gradient-purple"
+  },
+  {
+    "id": "7",
+    "text": "Peace comes from within. Do not seek it without.",
+    "author": "Buddha",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["inner peace", "spirituality"],
+    "moods": ["peaceful"],
+    "backgroundStyle": "solid-lavender"
+  },
+  {
+    "id": "8",
+    "text": "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+    "author": "Steve Jobs",
+    "topics": ["success", "motivation", "wisdom"],
+    "categories": ["career", "passion"],
+    "moods": ["motivated"],
+    "backgroundStyle": "gradient-red"
+  },
+  {
+    "id": "9",
+    "text": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.",
+    "author": "Mark Twain",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["emotions", "self-control"],
+    "moods": ["angry"],
+    "backgroundStyle": "solid-crimson"
+  },
+  {
+    "id": "10",
+    "text": "Every morning we are born again. What we do today matters most.",
+    "author": "Buddha",
+    "topics": ["mindfulness", "motivation"],
+    "categories": ["fresh start", "presence"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "gradient-sunrise"
+  },
+  {
+    "id": "11",
+    "text": "When you are grateful, fear disappears and abundance appears.",
+    "author": "Tony Robbins",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["gratitude", "abundance"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "gradient-gold"
+  },
+  {
+    "id": "12",
+    "text": "Tears are words the heart can't express.",
+    "author": "Unknown",
+    "topics": ["wisdom"],
+    "categories": ["emotions", "healing"],
+    "moods": ["sad"],
+    "backgroundStyle": "solid-gray"
+  },
+  {
+    "id": "13",
+    "text": "Courage is not the absence of fear, but rather the assessment that something else is more important than fear. The brave may not live forever, but the cautious do not live at all.",
+    "author": "Meg Cabot",
+    "topics": ["courage", "motivation", "wisdom"],
+    "categories": ["bravery", "living fully"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "gradient-amber"
+  },
+  {
+    "id": "14",
+    "text": "Breathe. You are enough.",
+    "author": "Anonymous",
+    "topics": ["mindfulness", "courage"],
+    "categories": ["self-acceptance", "calm"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "solid-sky"
+  },
+  {
+    "id": "15",
+    "text": "Your value doesn't decrease based on someone's inability to see your worth. Stand tall, stay true to yourself, and never dim your light for anyone.",
+    "author": "Unknown",
+    "topics": ["wisdom", "courage", "motivation"],
+    "categories": ["self-worth", "empowerment"],
+    "moods": ["angry", "motivated"],
+    "backgroundStyle": "gradient-violet"
+  }
+]
