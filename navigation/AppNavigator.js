@@ -32,6 +32,7 @@ export default function AppNavigator() {
           },
           tabBarActiveTintColor: '#4CAF50',
           tabBarInactiveTintColor: 'gray',
+          tabBarShowLabel: false,
           headerStyle: {
             backgroundColor: '#4CAF50',
           },
