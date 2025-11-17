@@ -1,13 +1,42 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
+import QuoteDetailScreen from '../screens/QuoteDetailScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
+const FavoritesStack = createStackNavigator();
+
+function FavoritesStackNavigator() {
+  return (
+    <FavoritesStack.Navigator>
+      <FavoritesStack.Screen
+        name="FavoritesList"
+        component={FavoritesScreen}
+        options={{ headerShown: false }}
+      />
+      <FavoritesStack.Screen
+        name="QuoteDetail"
+        component={QuoteDetailScreen}
+        options={{
+          title: 'Quote Details',
+          headerStyle: {
+            backgroundColor: '#4CAF50',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+    </FavoritesStack.Navigator>
+  );
+}
 
 export default function AppNavigator() {
   return (
@@ -54,7 +83,7 @@ export default function AppNavigator() {
         />
         <Tab.Screen
           name="Favorites"
-          component={FavoritesScreen}
+          component={FavoritesStackNavigator}
           options={{ title: 'Favorites' }}
         />
         <Tab.Screen
