@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   View,
   Text,
@@ -7,6 +7,8 @@ import {
   FlatList,
   TouchableOpacity,
   Platform,
+  Modal,
+  ScrollView,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { getAllQuotes } from '../src/services/quoteService';
@@ -15,7 +17,8 @@ export default function SearchScreen({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [allQuotes, setAllQuotes] = useState([]);
   const [filteredQuotes, setFilteredQuotes] = useState([]);
-  const [activeFilter, setActiveFilter] = useState(null); // 'authors', 'topics', 'moods', or null
+  const [selectedAuthors, setSelectedAuthors] = useState([]);
+  const [showAuthorsModal, setShowAuthorsModal] = useState(false);
 
   useEffect(() => {
     // Load all quotes when component mounts
@@ -24,29 +27,63 @@ export default function SearchScreen({ navigation }) {
     setFilteredQuotes(quotes);
   }, []);
 
+  // Extract unique authors from all quotes
+  const uniqueAuthors = useMemo(() => {
+    const authorsSet = new Set(allQuotes.map((quote) => quote.author));
+    return Array.from(authorsSet).sort();
+  }, [allQuotes]);
+
   useEffect(() => {
-    // Filter quotes based on search query
-    if (searchQuery.trim() === '') {
-      setFilteredQuotes(allQuotes);
-    } else {
+    // Filter quotes based on search query and selected authors
+    let filtered = allQuotes;
+
+    // Apply author filter if any authors are selected
+    if (selectedAuthors.length > 0) {
+      filtered = filtered.filter((quote) =>
+        selectedAuthors.includes(quote.author)
+      );
+    }
+
+    // Apply search query filter
+    if (searchQuery.trim() !== '') {
       const query = searchQuery.toLowerCase();
-      const filtered = allQuotes.filter((quote) => {
-        // Search in both quote text and author name
+      filtered = filtered.filter((quote) => {
         const textMatch = quote.text.toLowerCase().includes(query);
         const authorMatch = quote.author.toLowerCase().includes(query);
         return textMatch || authorMatch;
       });
-      setFilteredQuotes(filtered);
     }
-  }, [searchQuery, allQuotes]);
+
+    setFilteredQuotes(filtered);
+  }, [searchQuery, allQuotes, selectedAuthors]);
 
   const handleQuotePress = (quote) => {
     navigation.navigate('QuoteDetail', { quote });
   };
 
   const handleFilterPress = (filterType) => {
-    // For now, these are placeholders - will be implemented later
-    setActiveFilter(activeFilter === filterType ? null : filterType);
+    if (filterType === 'authors') {
+      setShowAuthorsModal(true);
+    }
+    // Topics and Moods will be implemented later
+  };
+
+  const handleAuthorToggle = (author) => {
+    setSelectedAuthors((prev) => {
+      if (prev.includes(author)) {
+        return prev.filter((a) => a !== author);
+      } else {
+        return [...prev, author];
+      }
+    });
+  };
+
+  const handleClearFilters = () => {
+    setSelectedAuthors([]);
+  };
+
+  const handleRemoveAuthorFilter = (author) => {
+    setSelectedAuthors((prev) => prev.filter((a) => a !== author));
   };
 
   const renderQuoteItem = ({ item }) => (
@@ -69,15 +106,47 @@ export default function SearchScreen({ navigation }) {
     <View style={styles.emptyContainer}>
       <Ionicons name="search-outline" size={80} color="#ccc" />
       <Text style={styles.emptyTitle}>
-        {searchQuery ? 'No quotes found' : 'Search for quotes'}
+        {searchQuery || selectedAuthors.length > 0
+          ? 'No quotes found'
+          : 'Search for quotes'}
       </Text>
       <Text style={styles.emptySubtitle}>
-        {searchQuery
-          ? 'Try a different search term'
+        {searchQuery || selectedAuthors.length > 0
+          ? 'Try adjusting your search or filters'
           : 'Enter a keyword to search quotes and authors'}
       </Text>
     </View>
   );
+
+  const renderAuthorItem = ({ item: author }) => {
+    const isSelected = selectedAuthors.includes(author);
+    return (
+      <TouchableOpacity
+        style={styles.authorItem}
+        onPress={() => handleAuthorToggle(author)}
+        activeOpacity={0.7}
+      >
+        <View style={styles.authorItemContent}>
+          <Text style={styles.authorItemText}>{author}</Text>
+          <Text style={styles.authorItemCount}>
+            {allQuotes.filter((q) => q.author === author).length} quotes
+          </Text>
+        </View>
+        <View
+          style={[
+            styles.checkbox,
+            isSelected && styles.checkboxSelected,
+          ]}
+        >
+          {isSelected && (
+            <Ionicons name="checkmark" size={18} color="#fff" />
+          )}
+        </View>
+      </TouchableOpacity>
+    );
+  };
+
+  const hasActiveFilters = selectedAuthors.length > 0;
 
   return (
     <View style={styles.container}>
@@ -107,69 +176,80 @@ export default function SearchScreen({ navigation }) {
         <TouchableOpacity
           style={[
             styles.filterButton,
-            activeFilter === 'authors' && styles.filterButtonActive,
+            selectedAuthors.length > 0 && styles.filterButtonActive,
           ]}
           onPress={() => handleFilterPress('authors')}
         >
           <Ionicons
             name="person-outline"
             size={16}
-            color={activeFilter === 'authors' ? '#fff' : '#4CAF50'}
+            color={selectedAuthors.length > 0 ? '#fff' : '#4CAF50'}
           />
           <Text
             style={[
               styles.filterButtonText,
-              activeFilter === 'authors' && styles.filterButtonTextActive,
+              selectedAuthors.length > 0 && styles.filterButtonTextActive,
             ]}
           >
             Authors
+            {selectedAuthors.length > 0 && ` (${selectedAuthors.length})`}
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[
-            styles.filterButton,
-            activeFilter === 'topics' && styles.filterButtonActive,
-          ]}
+          style={styles.filterButton}
           onPress={() => handleFilterPress('topics')}
         >
           <Ionicons
             name="pricetag-outline"
             size={16}
-            color={activeFilter === 'topics' ? '#fff' : '#4CAF50'}
+            color="#4CAF50"
           />
-          <Text
-            style={[
-              styles.filterButtonText,
-              activeFilter === 'topics' && styles.filterButtonTextActive,
-            ]}
-          >
-            Topics
-          </Text>
+          <Text style={styles.filterButtonText}>Topics</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[
-            styles.filterButton,
-            activeFilter === 'moods' && styles.filterButtonActive,
-          ]}
+          style={styles.filterButton}
           onPress={() => handleFilterPress('moods')}
         >
           <Ionicons
             name="happy-outline"
             size={16}
-            color={activeFilter === 'moods' ? '#fff' : '#4CAF50'}
+            color="#4CAF50"
           />
-          <Text
-            style={[
-              styles.filterButtonText,
-              activeFilter === 'moods' && styles.filterButtonTextActive,
-            ]}
-          >
-            Moods
-          </Text>
+          <Text style={styles.filterButtonText}>Moods</Text>
         </TouchableOpacity>
       </View>
+
+      {/* Active Filters Chips */}
+      {hasActiveFilters && (
+        <View style={styles.activeFiltersContainer}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.chipsScrollContent}
+          >
+            {selectedAuthors.map((author) => (
+              <View key={author} style={styles.filterChip}>
+                <Ionicons name="person" size={14} color="#4CAF50" />
+                <Text style={styles.filterChipText}>{author}</Text>
+                <TouchableOpacity
+                  onPress={() => handleRemoveAuthorFilter(author)}
+                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
+                  <Ionicons name="close-circle" size={16} color="#4CAF50" />
+                </TouchableOpacity>
+              </View>
+            ))}
+            <TouchableOpacity
+              style={styles.clearFiltersButton}
+              onPress={handleClearFilters}
+            >
+              <Text style={styles.clearFiltersText}>Clear All</Text>
+            </TouchableOpacity>
+          </ScrollView>
+        </View>
+      )}
 
       {/* Results List */}
       <FlatList
@@ -182,6 +262,64 @@ export default function SearchScreen({ navigation }) {
         ListEmptyComponent={renderEmptyState}
         showsVerticalScrollIndicator={true}
       />
+
+      {/* Authors Filter Modal */}
+      <Modal
+        visible={showAuthorsModal}
+        animationType="slide"
+        transparent={true}
+        onRequestClose={() => setShowAuthorsModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContainer}>
+            {/* Modal Header */}
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalTitle}>Filter by Authors</Text>
+              <TouchableOpacity
+                onPress={() => setShowAuthorsModal(false)}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              >
+                <Ionicons name="close" size={28} color="#333" />
+              </TouchableOpacity>
+            </View>
+
+            {/* Selected Count */}
+            <View style={styles.modalSubHeader}>
+              <Text style={styles.selectedCountText}>
+                {selectedAuthors.length > 0
+                  ? `${selectedAuthors.length} author${selectedAuthors.length > 1 ? 's' : ''} selected`
+                  : 'Select one or more authors'}
+              </Text>
+              {selectedAuthors.length > 0 && (
+                <TouchableOpacity onPress={handleClearFilters}>
+                  <Text style={styles.clearLinkText}>Clear All</Text>
+                </TouchableOpacity>
+              )}
+            </View>
+
+            {/* Authors List */}
+            <FlatList
+              data={uniqueAuthors}
+              renderItem={renderAuthorItem}
+              keyExtractor={(item) => item}
+              contentContainerStyle={styles.authorsListContainer}
+              showsVerticalScrollIndicator={true}
+            />
+
+            {/* Modal Footer */}
+            <View style={styles.modalFooter}>
+              <TouchableOpacity
+                style={styles.applyButton}
+                onPress={() => setShowAuthorsModal(false)}
+              >
+                <Text style={styles.applyButtonText}>
+                  Apply Filter{selectedAuthors.length > 0 ? ` (${selectedAuthors.length})` : ''}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -250,6 +388,42 @@ const styles = StyleSheet.create({
   filterButtonTextActive: {
     color: '#fff',
   },
+  activeFiltersContainer: {
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e0e0e0',
+  },
+  chipsScrollContent: {
+    paddingHorizontal: 16,
+    gap: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  filterChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#E8F5E9',
+    borderRadius: 20,
+    paddingVertical: 6,
+    paddingLeft: 10,
+    paddingRight: 8,
+    gap: 6,
+  },
+  filterChipText: {
+    fontSize: 14,
+    color: '#2E7D32',
+    fontWeight: '500',
+  },
+  clearFiltersButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  clearFiltersText: {
+    fontSize: 14,
+    color: '#e91e63',
+    fontWeight: '600',
+  },
   listContainer: {
     padding: 16,
   },
@@ -306,5 +480,101 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#999',
     textAlign: 'center',
+  },
+  // Modal Styles
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'flex-end',
+  },
+  modalContainer: {
+    backgroundColor: '#fff',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    maxHeight: '80%',
+    paddingBottom: Platform.OS === 'ios' ? 34 : 20,
+  },
+  modalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e0e0e0',
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  modalSubHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    backgroundColor: '#f5f5f5',
+  },
+  selectedCountText: {
+    fontSize: 14,
+    color: '#666',
+  },
+  clearLinkText: {
+    fontSize: 14,
+    color: '#e91e63',
+    fontWeight: '600',
+  },
+  authorsListContainer: {
+    paddingVertical: 8,
+  },
+  authorItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  authorItemContent: {
+    flex: 1,
+  },
+  authorItemText: {
+    fontSize: 16,
+    color: '#333',
+    marginBottom: 4,
+  },
+  authorItemCount: {
+    fontSize: 12,
+    color: '#999',
+  },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: '#ccc',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  checkboxSelected: {
+    backgroundColor: '#4CAF50',
+    borderColor: '#4CAF50',
+  },
+  modalFooter: {
+    padding: 16,
+    borderTopWidth: 1,
+    borderTopColor: '#e0e0e0',
+  },
+  applyButton: {
+    backgroundColor: '#4CAF50',
+    borderRadius: 12,
+    paddingVertical: 14,
+    alignItems: 'center',
+  },
+  applyButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
