@@ -11,6 +11,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 const FavoritesStack = createStackNavigator();
+const SearchStack = createStackNavigator();
 
 function FavoritesStackNavigator() {
   return (
@@ -35,6 +36,32 @@ function FavoritesStackNavigator() {
         }}
       />
     </FavoritesStack.Navigator>
+  );
+}
+
+function SearchStackNavigator() {
+  return (
+    <SearchStack.Navigator>
+      <SearchStack.Screen
+        name="SearchList"
+        component={SearchScreen}
+        options={{ headerShown: false }}
+      />
+      <SearchStack.Screen
+        name="QuoteDetail"
+        component={QuoteDetailScreen}
+        options={{
+          title: 'Quote Details',
+          headerStyle: {
+            backgroundColor: '#4CAF50',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+    </SearchStack.Navigator>
   );
 }
 
@@ -78,7 +105,7 @@ export default function AppNavigator() {
         />
         <Tab.Screen
           name="Search"
-          component={SearchScreen}
+          component={SearchStackNavigator}
           options={{ title: 'Search Quotes' }}
         />
         <Tab.Screen
