@@ -77,7 +77,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.container}>
         <Text style={styles.title}>Quoterback</Text>
         <Text style={styles.subtitle}>Your Daily Dose of Inspiration</Text>
-        {randomQuote && <QuoteCard quote={randomQuote} />}
+        {randomQuote && <QuoteCard quote={randomQuote} showFavoriteButton={tabBarVisible} />}
       </View>
     </TouchableWithoutFeedback>
   );
