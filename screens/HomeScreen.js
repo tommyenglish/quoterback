@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import QuoteCard from '../src/components/QuoteCard';
-import { getRandomQuote } from '../src/services/quoteService';
+import { getAllQuotes } from '../src/services/quoteService';
 
 export default function HomeScreen({ navigation }) {
-  const [randomQuote, setRandomQuote] = useState(null);
+  const [quotes, setQuotes] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [tabBarVisible, setTabBarVisible] = useState(false);
 
   useEffect(() => {
-    // Select a random quote using the quote service
-    setRandomQuote(getRandomQuote());
+    // Get all quotes and start at a random index
+    const allQuotes = getAllQuotes();
+    const randomIndex = Math.floor(Math.random() * allQuotes.length);
+    setQuotes(allQuotes);
+    setCurrentIndex(randomIndex);
   }, []);
 
   useEffect(() => {
@@ -72,12 +76,26 @@ export default function HomeScreen({ navigation }) {
     }
   };
 
+  const handleNextQuote = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % quotes.length);
+  };
+
+  const handlePreviousQuote = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + quotes.length) % quotes.length);
+  };
+
   return (
     <TouchableWithoutFeedback onPress={toggleTabBar}>
       <View style={styles.container}>
-        <Text style={styles.title}>Quoterback</Text>
-        <Text style={styles.subtitle}>Your Daily Dose of Inspiration</Text>
-        {randomQuote && <QuoteCard quote={randomQuote} showFavoriteButton={tabBarVisible} />}
+        {quotes.length > 0 && (
+          <QuoteCard
+            quote={quotes[currentIndex]}
+            controlsVisible={tabBarVisible}
+            onSwipeLeft={handleNextQuote}
+            onSwipeRight={handlePreviousQuote}
+            key={quotes[currentIndex].id}
+          />
+        )}
       </View>
     </TouchableWithoutFeedback>
   );
@@ -86,20 +104,6 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 8,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#666',
-    marginBottom: 40,
+    backgroundColor: '#000',
   },
 });
