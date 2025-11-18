@@ -101,7 +101,7 @@ export default function AppNavigator() {
         <Tab.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: 'Quoterback' }}
+          options={{ title: 'Quoterback', headerShown: false }}
         />
         <Tab.Screen
           name="Search"
