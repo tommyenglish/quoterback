@@ -60,11 +60,37 @@ export const requestNotificationPermissions = async () => {
  */
 export const getQuoteForNotification = () => {
   try {
-    const { themeBackgrounds } = useSettingsStore.getState();
+    const {
+      themeBackgrounds,
+      notificationAuthors,
+      notificationTopics,
+      notificationMoods
+    } = useSettingsStore.getState();
     const { getLeastUsedQuotes } = useQuoteUsageStore.getState();
 
     // Get all quotes
     let availableQuotes = getAllQuotes();
+
+    // Apply author filter if any authors are selected
+    if (notificationAuthors.length > 0) {
+      availableQuotes = availableQuotes.filter((quote) =>
+        notificationAuthors.includes(quote.author)
+      );
+    }
+
+    // Apply topics filter if any topics are selected
+    if (notificationTopics.length > 0) {
+      availableQuotes = availableQuotes.filter((quote) =>
+        quote.topics?.some((topic) => notificationTopics.includes(topic))
+      );
+    }
+
+    // Apply moods filter if any moods are selected
+    if (notificationMoods.length > 0) {
+      availableQuotes = availableQuotes.filter((quote) =>
+        quote.moods?.some((mood) => notificationMoods.includes(mood))
+      );
+    }
 
     // Filter by theme backgrounds (backgroundStyle in quotes)
     // Map theme preferences to backgroundStyle categories
@@ -94,6 +120,7 @@ export const getQuoteForNotification = () => {
 
     // If no quotes match the filters, fall back to all quotes
     if (availableQuotes.length === 0) {
+      console.log('No quotes match the current filters, using all quotes');
       availableQuotes = getAllQuotes();
     }
 
