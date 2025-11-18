@@ -22,19 +22,22 @@ const THEME_OPTIONS = [
   { value: 'nature', label: 'Nature', icon: 'leaf-outline' },
   { value: 'space', label: 'Space', icon: 'planet-outline' },
   { value: 'architecture', label: 'Architecture', icon: 'business-outline' },
-  { value: 'abstract', label: 'Abstract', icon: 'color-palette-outline' },
-  { value: 'solid', label: 'Solid Color', icon: 'square-outline' },
-  { value: 'gradient', label: 'Gradient', icon: 'layers-outline' },
+  { value: 'art', label: 'Art', icon: 'color-palette-outline' },
+  { value: 'urban', label: 'Urban', icon: 'city-outline' },
+  { value: 'vintage', label: 'Vintage', icon: 'camera-outline' },
+  { value: 'blackAndWhite', label: 'Black & White', icon: 'contrast-outline' },
+  { value: 'textures', label: 'Textures', icon: 'grid-outline' },
+  { value: 'minimalist', label: 'Minimalist', icon: 'remove-outline' },
 ];
 
 export default function SettingsScreen() {
   const {
     notificationTime,
     notificationCadence,
-    themeBackground,
+    themeBackgrounds,
     setNotificationTime,
     setNotificationCadence,
-    setThemeBackground,
+    toggleThemeBackground,
   } = useSettingsStore();
 
   const [showTimePicker, setShowTimePicker] = useState(false);
@@ -177,43 +180,46 @@ export default function SettingsScreen() {
 
         <View style={styles.settingCard}>
           <View style={styles.settingInfo}>
-            <Text style={styles.settingLabel}>Background Style</Text>
+            <Text style={styles.settingLabel}>Background Themes</Text>
             <Text style={styles.settingDescription}>
-              Choose your preferred quote background
+              Select one or more themes for quote backgrounds
             </Text>
           </View>
 
           <View style={styles.themeGrid}>
-            {THEME_OPTIONS.map((theme) => (
-              <TouchableOpacity
-                key={theme.value}
-                style={[
-                  styles.themeOption,
-                  themeBackground === theme.value && styles.themeOptionSelected,
-                ]}
-                onPress={() => setThemeBackground(theme.value)}
-                activeOpacity={0.7}
-              >
-                <Ionicons
-                  name={theme.icon}
-                  size={32}
-                  color={themeBackground === theme.value ? '#4CAF50' : '#666'}
-                />
-                <Text
+            {THEME_OPTIONS.map((theme) => {
+              const isSelected = themeBackgrounds.includes(theme.value);
+              return (
+                <TouchableOpacity
+                  key={theme.value}
                   style={[
-                    styles.themeOptionText,
-                    themeBackground === theme.value && styles.themeOptionTextSelected,
+                    styles.themeOption,
+                    isSelected && styles.themeOptionSelected,
                   ]}
+                  onPress={() => toggleThemeBackground(theme.value)}
+                  activeOpacity={0.7}
                 >
-                  {theme.label}
-                </Text>
-                {themeBackground === theme.value && (
-                  <View style={styles.selectedBadge}>
-                    <Ionicons name="checkmark-circle" size={20} color="#4CAF50" />
-                  </View>
-                )}
-              </TouchableOpacity>
-            ))}
+                  <Ionicons
+                    name={theme.icon}
+                    size={28}
+                    color={isSelected ? '#4CAF50' : '#666'}
+                  />
+                  <Text
+                    style={[
+                      styles.themeOptionText,
+                      isSelected && styles.themeOptionTextSelected,
+                    ]}
+                  >
+                    {theme.label}
+                  </Text>
+                  {isSelected && (
+                    <View style={styles.selectedBadge}>
+                      <Ionicons name="checkmark-circle" size={18} color="#4CAF50" />
+                    </View>
+                  )}
+                </TouchableOpacity>
+              );
+            })}
           </View>
         </View>
       </View>
@@ -221,7 +227,7 @@ export default function SettingsScreen() {
       {/* Info Footer */}
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Theme backgrounds will be applied to quotes throughout the app
+          Quote backgrounds will randomly vary between your selected themes. At least one theme must be selected.
         </Text>
       </View>
     </ScrollView>
@@ -375,11 +381,11 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   themeOption: {
-    width: '30%',
+    width: '31%',
     aspectRatio: 1,
     backgroundColor: '#f5f5f5',
     borderRadius: 12,
-    padding: 12,
+    padding: 8,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -391,11 +397,12 @@ const styles = StyleSheet.create({
     borderColor: '#4CAF50',
   },
   themeOptionText: {
-    fontSize: 12,
+    fontSize: 11,
     color: '#666',
     textAlign: 'center',
-    marginTop: 8,
+    marginTop: 6,
     fontWeight: '500',
+    lineHeight: 13,
   },
   themeOptionTextSelected: {
     color: '#4CAF50',
