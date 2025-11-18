@@ -7,14 +7,14 @@ const SETTINGS_STORAGE_KEY = '@quoterback_settings';
 const DEFAULT_SETTINGS = {
   notificationTime: new Date(new Date().setHours(9, 0, 0, 0)).toISOString(), // 9:00 AM
   notificationCadence: 'daily', // 'daily', 'everyOtherDay', 'weekly'
-  themeBackground: 'nature', // 'nature', 'space', 'architecture', 'abstract', 'solid', 'gradient'
+  themeBackgrounds: ['nature', 'space'], // Array of selected themes
 };
 
 const useSettingsStore = create((set, get) => ({
   // Settings state
   notificationTime: DEFAULT_SETTINGS.notificationTime,
   notificationCadence: DEFAULT_SETTINGS.notificationCadence,
-  themeBackground: DEFAULT_SETTINGS.themeBackground,
+  themeBackgrounds: DEFAULT_SETTINGS.themeBackgrounds,
   isLoaded: false,
 
   // Initialize and load settings from AsyncStorage
@@ -23,6 +23,18 @@ const useSettingsStore = create((set, get) => ({
       const storedSettings = await AsyncStorage.getItem(SETTINGS_STORAGE_KEY);
       if (storedSettings) {
         const parsedSettings = JSON.parse(storedSettings);
+
+        // Migrate old single theme to new array format
+        if (parsedSettings.themeBackground && !parsedSettings.themeBackgrounds) {
+          parsedSettings.themeBackgrounds = [parsedSettings.themeBackground];
+          delete parsedSettings.themeBackground;
+        }
+
+        // Ensure themeBackgrounds is an array with at least one theme
+        if (!parsedSettings.themeBackgrounds || parsedSettings.themeBackgrounds.length === 0) {
+          parsedSettings.themeBackgrounds = DEFAULT_SETTINGS.themeBackgrounds;
+        }
+
         set({
           ...parsedSettings,
           isLoaded: true
@@ -53,7 +65,7 @@ const useSettingsStore = create((set, get) => ({
     const updatedSettings = {
       notificationTime: time,
       notificationCadence: currentSettings.notificationCadence,
-      themeBackground: currentSettings.themeBackground,
+      themeBackgrounds: currentSettings.themeBackgrounds,
     };
 
     set({ notificationTime: time });
@@ -68,26 +80,43 @@ const useSettingsStore = create((set, get) => ({
     const updatedSettings = {
       notificationTime: currentSettings.notificationTime,
       notificationCadence: cadence,
-      themeBackground: currentSettings.themeBackground,
+      themeBackgrounds: currentSettings.themeBackgrounds,
     };
 
     set({ notificationCadence: cadence });
     saveSettings(updatedSettings);
   },
 
-  // Update theme background
-  setThemeBackground: (theme) => {
-    const { saveSettings } = get();
+  // Toggle theme background (add or remove from selected themes)
+  toggleThemeBackground: (theme) => {
+    const { saveSettings, themeBackgrounds } = get();
     const currentSettings = get();
+
+    let updatedThemes;
+    if (themeBackgrounds.includes(theme)) {
+      // Don't allow deselecting if it's the only theme
+      if (themeBackgrounds.length === 1) {
+        return;
+      }
+      updatedThemes = themeBackgrounds.filter((t) => t !== theme);
+    } else {
+      updatedThemes = [...themeBackgrounds, theme];
+    }
 
     const updatedSettings = {
       notificationTime: currentSettings.notificationTime,
       notificationCadence: currentSettings.notificationCadence,
-      themeBackground: theme,
+      themeBackgrounds: updatedThemes,
     };
 
-    set({ themeBackground: theme });
+    set({ themeBackgrounds: updatedThemes });
     saveSettings(updatedSettings);
+  },
+
+  // Check if a theme is selected
+  isThemeSelected: (theme) => {
+    const { themeBackgrounds } = get();
+    return themeBackgrounds.includes(theme);
   },
 
   // Reset to default settings
@@ -96,7 +125,7 @@ const useSettingsStore = create((set, get) => ({
     set({
       notificationTime: DEFAULT_SETTINGS.notificationTime,
       notificationCadence: DEFAULT_SETTINGS.notificationCadence,
-      themeBackground: DEFAULT_SETTINGS.themeBackground,
+      themeBackgrounds: DEFAULT_SETTINGS.themeBackgrounds,
     });
     saveSettings(DEFAULT_SETTINGS);
   },
