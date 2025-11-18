@@ -1663,5 +1663,113 @@
     "categories": ["resilience", "strength"],
     "moods": ["peaceful", "motivated"],
     "backgroundStyle": "minimal"
+  },
+  {
+    "id": "186",
+    "text": "The joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives.",
+    "author": "Russell M. Nelson",
+    "topics": ["mindfulness", "wisdom", "general conference"],
+    "categories": ["joy", "perspective"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "187",
+    "text": "Doubt your doubts before you doubt your faith.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["faith", "perseverance"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "188",
+    "text": "It is not enough to be good. We must be good for something.",
+    "author": "Gordon B. Hinckley",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["purpose", "service"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "189",
+    "text": "The heavens are open. The great potential of our time is that heaven is closer than at any other time in history.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["wisdom", "general conference"],
+    "categories": ["hope", "inspiration"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "190",
+    "text": "In coming days, it will not be possible to survive spiritually without the guiding, directing, comforting, and constant influence of the Holy Ghost.",
+    "author": "Russell M. Nelson",
+    "topics": ["wisdom", "courage", "general conference"],
+    "categories": ["spirituality", "guidance"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "191",
+    "text": "Hope is not knowledge, but rather a trusting reliance on what we have reason to believe is true.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["wisdom", "courage", "general conference"],
+    "categories": ["hope", "faith"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "192",
+    "text": "You are stronger than you think. You are more capable than you realize.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["courage", "motivation", "general conference"],
+    "categories": ["self-belief", "strength"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "193",
+    "text": "We have a sacred responsibility to do our part and to lift and to strengthen and to build others.",
+    "author": "M. Russell Ballard",
+    "topics": ["love", "wisdom", "general conference"],
+    "categories": ["service", "kindness"],
+    "moods": ["grateful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "194",
+    "text": "As you lose your life in the service of others, you will discover it was the best time of your life.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["love", "wisdom", "general conference"],
+    "categories": ["service", "fulfillment"],
+    "moods": ["grateful", "happy"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "195",
+    "text": "It's not the nail in the tire. It's how you deal with the nail in the tire that makes the difference.",
+    "author": "David A. Bednar",
+    "topics": ["wisdom", "perseverance", "general conference"],
+    "categories": ["resilience", "perspective"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "196",
+    "text": "The best is yet to come. We are just getting started.",
+    "author": "Russell M. Nelson",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["hope", "future"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "197",
+    "text": "Don't be discouraged at seemingly overwhelming odds in your desire to live and to help others live God's commandments. At times it may seem like David trying to fight Goliath. But remember, David did win.",
+    "author": "David A. Bednar",
+    "topics": ["courage", "perseverance", "general conference"],
+    "categories": ["faith", "determination"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
   }
 ]
