@@ -1483,5 +1483,95 @@
     "categories": ["growth", "challenge"],
     "moods": ["anxious", "motivated"],
     "backgroundStyle": "urban"
+  },
+  {
+    "id": "166",
+    "text": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis",
+    "topics": ["perseverance", "wisdom", "courage"],
+    "categories": ["adversity", "destiny"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "167",
+    "text": "You can make anything by writing.",
+    "author": "C.S. Lewis",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["creativity", "expression"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "168",
+    "text": "There are far, far better things ahead than any we leave behind.",
+    "author": "C.S. Lewis",
+    "topics": ["change", "wisdom"],
+    "categories": ["hope", "future"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "169",
+    "text": "Courage is not simply one of the virtues, but the form of every virtue at the testing point.",
+    "author": "C.S. Lewis",
+    "topics": ["courage", "wisdom"],
+    "categories": ["virtue", "strength"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "170",
+    "text": "We are what we believe we are.",
+    "author": "C.S. Lewis",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["self-belief", "identity"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "171",
+    "text": "Failures are finger posts on the road to achievement.",
+    "author": "C.S. Lewis",
+    "topics": ["perseverance", "success"],
+    "categories": ["failure", "learning"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "172",
+    "text": "Getting over a painful experience is much like crossing monkey bars. You have to let go at some point in order to move forward.",
+    "author": "C.S. Lewis",
+    "topics": ["wisdom", "change"],
+    "categories": ["letting go", "healing"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "173",
+    "text": "Integrity is doing the right thing, even when no one is watching.",
+    "author": "C.S. Lewis",
+    "topics": ["wisdom", "courage"],
+    "categories": ["integrity", "character"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "174",
+    "text": "Friendship is born at that moment when one person says to another: 'What! You too? I thought I was the only one.'",
+    "author": "C.S. Lewis",
+    "topics": ["love", "wisdom"],
+    "categories": ["friendship", "connection"],
+    "moods": ["happy", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "175",
+    "text": "Affection is responsible for nine-tenths of whatever solid and durable happiness there is in our lives.",
+    "author": "C.S. Lewis",
+    "topics": ["love", "wisdom"],
+    "categories": ["affection", "happiness"],
+    "moods": ["grateful", "happy"],
+    "backgroundStyle": "nature"
   }
 ]
