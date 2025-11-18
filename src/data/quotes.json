@@ -1573,5 +1573,95 @@
     "categories": ["affection", "happiness"],
     "moods": ["grateful", "happy"],
     "backgroundStyle": "nature"
+  },
+  {
+    "id": "176",
+    "text": "All we have to decide is what to do with the time that is given us.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["time", "choice"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "177",
+    "text": "Even the smallest person can change the course of the future.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["courage", "motivation"],
+    "categories": ["impact", "potential"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "178",
+    "text": "It's the job that's never started as takes longest to finish.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["action", "beginning"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "179",
+    "text": "Courage is found in unlikely places.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["courage", "wisdom"],
+    "categories": ["bravery", "discovery"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "180",
+    "text": "The road goes ever on and on, down from the door where it began.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["wisdom", "change"],
+    "categories": ["journey", "adventure"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "181",
+    "text": "There is some good in this world, and it's worth fighting for.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["courage", "wisdom"],
+    "categories": ["hope", "purpose"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "182",
+    "text": "It is not despair, for despair is only for those who see the end beyond all doubt. We do not.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["hope", "resilience"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "183",
+    "text": "Faithless is he that says farewell when the road darkens.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["perseverance", "courage"],
+    "categories": ["loyalty", "commitment"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "184",
+    "text": "Still round the corner there may wait, a new road or a secret gate.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["wisdom", "change"],
+    "categories": ["hope", "possibility"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "185",
+    "text": "Deep roots are not reached by the frost.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["resilience", "strength"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
   }
 ]
