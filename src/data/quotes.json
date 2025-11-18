@@ -1771,5 +1771,365 @@
     "categories": ["faith", "determination"],
     "moods": ["anxious", "motivated"],
     "backgroundStyle": "minimal"
+  },
+  {
+    "id": "198",
+    "text": "When the focus of our lives is on God's plan of salvation and Jesus Christ and His gospel, we can feel joy regardless of what is happening—or not happening—in our lives.",
+    "author": "Russell M. Nelson",
+    "topics": ["mindfulness", "wisdom", "general conference"],
+    "categories": ["joy", "faith"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "199",
+    "text": "The temple is a place of revelation. There you are shown how to progress toward a celestial life. There you are drawn closer to the Savior and given greater access to His power.",
+    "author": "Russell M. Nelson",
+    "topics": ["wisdom", "general conference"],
+    "categories": ["spirituality", "revelation"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "200",
+    "text": "Sometimes we feel that the way we are is due to our makeup or our circumstances, but we are not stuck being the way we are. We can change.",
+    "author": "Dale G. Renlund",
+    "topics": ["change", "motivation", "general conference"],
+    "categories": ["transformation", "hope"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "201",
+    "text": "God does not begin by asking about our ability, but only about our availability, and if we then prove our dependability, He will increase our capability.",
+    "author": "Neal A. Maxwell",
+    "topics": ["wisdom", "courage", "general conference"],
+    "categories": ["faith", "growth"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "202",
+    "text": "The Savior isn't asking us to be perfect; He's asking us to be much better.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["progress", "grace"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "203",
+    "text": "Be kind. Everyone you meet is fighting a battle you know nothing about.",
+    "author": "Henry B. Eyring",
+    "topics": ["love", "wisdom", "general conference"],
+    "categories": ["kindness", "compassion"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "204",
+    "text": "Faith in Jesus Christ is the foundation upon which sincere and meaningful repentance must be built.",
+    "author": "David A. Bednar",
+    "topics": ["wisdom", "courage", "general conference"],
+    "categories": ["faith", "repentance"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "205",
+    "text": "Our identity is not just what we think we are. Our identity is also who and what God says we are.",
+    "author": "Dallin H. Oaks",
+    "topics": ["wisdom", "mindfulness", "general conference"],
+    "categories": ["identity", "self-worth"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "206",
+    "text": "We need to ask ourselves, 'Am I serving God in a way that can change my own heart and the hearts of others?'",
+    "author": "D. Todd Christofferson",
+    "topics": ["wisdom", "love", "general conference"],
+    "categories": ["service", "transformation"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "207",
+    "text": "Choose faith over doubt, choose faith over fear, choose faith over the unknown and the unseen, and choose faith over pessimism.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["faith", "choice"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "208",
+    "text": "We become what we want to be by consistently being what we want to become each day.",
+    "author": "Richard G. Scott",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["habits", "transformation"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "209",
+    "text": "The Lord doesn't care nearly as much about where you have been as He does about where you are and where you are going.",
+    "author": "Dale G. Renlund",
+    "topics": ["wisdom", "change", "general conference"],
+    "categories": ["grace", "hope"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "210",
+    "text": "When we are on the Lord's errand, we are entitled to the Lord's help.",
+    "author": "Thomas S. Monson",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["service", "faith"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "211",
+    "text": "The gospel of Jesus Christ is not insurance against pain. It is resource in the event of pain, and when that pain comes, we must not attempt to use what was never meant to be our shield.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["wisdom", "perseverance", "general conference"],
+    "categories": ["resilience", "understanding"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "212",
+    "text": "Sometimes the greatest battles we will ever fight will be within the silent chambers of our own soul.",
+    "author": "Ezra Taft Benson",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["inner strength", "struggle"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "213",
+    "text": "With God, nothing is lost. All pain and suffering can be consecrated for our gain.",
+    "author": "Russell M. Nelson",
+    "topics": ["perseverance", "wisdom", "general conference"],
+    "categories": ["hope", "healing"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "214",
+    "text": "We need not worry if we can't simultaneously do all the things that the Lord has counseled us to do. He has spoken of a time and a season for all things.",
+    "author": "Dallin H. Oaks",
+    "topics": ["wisdom", "mindfulness", "general conference"],
+    "categories": ["patience", "balance"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "215",
+    "text": "If you are on the right path, it will always be uphill.",
+    "author": "Henry B. Eyring",
+    "topics": ["perseverance", "motivation", "general conference"],
+    "categories": ["growth", "challenge"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "216",
+    "text": "The Lord compensates the faithful for every loss. That which is taken away from those who love the Lord will be added unto them in His own way.",
+    "author": "Joseph B. Wirthlin",
+    "topics": ["wisdom", "perseverance", "general conference"],
+    "categories": ["faith", "compensation"],
+    "moods": ["sad", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "217",
+    "text": "You don't have to be perfect to be good. And it's the good that are asked to do the work.",
+    "author": "Sheri Dew",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["grace", "service"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "218",
+    "text": "Spiritual progress is like physical growth; we mature a step at a time.",
+    "author": "Quentin L. Cook",
+    "topics": ["wisdom", "perseverance", "general conference"],
+    "categories": ["growth", "patience"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "219",
+    "text": "We can choose to be grateful, no matter what. This type of gratitude transcends whatever obstacles we encounter.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["mindfulness", "wisdom", "general conference"],
+    "categories": ["gratitude", "choice"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "220",
+    "text": "It is not enough for us to be tolerant. The gospel calls for us to love and act with compassion.",
+    "author": "Bonnie H. Cordon",
+    "topics": ["love", "wisdom", "general conference"],
+    "categories": ["compassion", "action"],
+    "moods": ["grateful", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "221",
+    "text": "The size of our faith is an indication of our willingness to give up our will to God's will.",
+    "author": "Neil L. Andersen",
+    "topics": ["wisdom", "courage", "general conference"],
+    "categories": ["faith", "surrender"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "222",
+    "text": "Don't let discouragement or defeat consume you. God is preparing you for great things.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["motivation", "courage", "general conference"],
+    "categories": ["hope", "preparation"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "223",
+    "text": "When we choose to repent, we choose to change. We allow the Savior to transform us into the best version of ourselves.",
+    "author": "Russell M. Nelson",
+    "topics": ["change", "wisdom", "general conference"],
+    "categories": ["repentance", "transformation"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "224",
+    "text": "When it comes to hating, gossiping, ignoring, ridiculing, holding grudges, or wanting to cause harm—please apply the following: Stop it!",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["wisdom", "love", "general conference"],
+    "categories": ["kindness", "correction"],
+    "moods": ["angry", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "225",
+    "text": "Faith is not only a feeling; it is a decision.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["faith", "choice"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "226",
+    "text": "Press forward with faith in Christ. He will guide your steps. He will walk beside you and even carry you.",
+    "author": "Russell M. Nelson",
+    "topics": ["courage", "perseverance", "general conference"],
+    "categories": ["faith", "support"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "227",
+    "text": "We don't need to be perfect; we just need to be engaged.",
+    "author": "David A. Bednar",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["action", "grace"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "228",
+    "text": "Brothers and sisters, don't be afraid. Fear is the opposite of faith.",
+    "author": "Dallin H. Oaks",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["faith", "fear"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "229",
+    "text": "We cannot control all that happens to us; however, we can choose to be happy in all that happens.",
+    "author": "Jean B. Bingham",
+    "topics": ["mindfulness", "wisdom", "general conference"],
+    "categories": ["happiness", "choice"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "230",
+    "text": "You may wonder if you are good enough. You may wonder if there is hope. I testify that you are good enough, and there is hope.",
+    "author": "Dale G. Renlund",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["hope", "self-worth"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "231",
+    "text": "We are not diminished when someone else is added upon. We are not in a race against each other to see who is the wealthiest or the most talented or the most beautiful or even the most blessed.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["wisdom", "love", "general conference"],
+    "categories": ["comparison", "unity"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "232",
+    "text": "Each day is a day of decision, and our decisions determine our destiny.",
+    "author": "Russell M. Nelson",
+    "topics": ["motivation", "wisdom", "general conference"],
+    "categories": ["choice", "destiny"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "233",
+    "text": "The Lord loves effort. He blesses every attempt, every act of faith, every decision to follow Him.",
+    "author": "Gary E. Stevenson",
+    "topics": ["motivation", "courage", "general conference"],
+    "categories": ["effort", "faith"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "234",
+    "text": "Building faith requires action. We cannot expect to increase our faith without regular practice of the principles of the gospel.",
+    "author": "Ronald A. Rasband",
+    "topics": ["wisdom", "motivation", "general conference"],
+    "categories": ["faith", "action"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "235",
+    "text": "God is not a God of scarcity but a God of abundance.",
+    "author": "Dieter F. Uchtdorf",
+    "topics": ["wisdom", "mindfulness", "general conference"],
+    "categories": ["abundance", "faith"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "236",
+    "text": "Please believe in beginnings. And please believe in endings. But above all, please believe in middles, because that is where most of life takes place.",
+    "author": "Jeffrey R. Holland",
+    "topics": ["wisdom", "perseverance", "general conference"],
+    "categories": ["journey", "patience"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "237",
+    "text": "When you are living worthy of the companionship of the Holy Ghost, your confidence waxes strong.",
+    "author": "Henry B. Eyring",
+    "topics": ["courage", "wisdom", "general conference"],
+    "categories": ["confidence", "spirituality"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
   }
 ]
