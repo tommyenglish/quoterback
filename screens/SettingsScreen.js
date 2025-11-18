@@ -11,6 +11,7 @@ import {
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Ionicons } from '@expo/vector-icons';
 import useSettingsStore from '../src/store/settingsStore';
+import { sendTestNotification, rescheduleNotification } from '../src/services/notificationService';
 
 const CADENCE_OPTIONS = [
   { value: 'daily', label: 'Daily' },
@@ -44,7 +45,7 @@ export default function SettingsScreen() {
   const [tempTime, setTempTime] = useState(new Date(notificationTime));
 
   // Handle time change
-  const handleTimeChange = (event, selectedDate) => {
+  const handleTimeChange = async (event, selectedDate) => {
     if (Platform.OS === 'android') {
       setShowTimePicker(false);
     }
@@ -53,17 +54,37 @@ export default function SettingsScreen() {
       setTempTime(selectedDate);
       if (event.type === 'set' || Platform.OS === 'ios') {
         setNotificationTime(selectedDate.toISOString());
+        // Reschedule notification with new time
+        await rescheduleNotification();
       }
     }
   };
 
   // Handle test notification
-  const handleTestNotification = () => {
-    Alert.alert(
-      'Test Notification',
-      'This is how your quote notification will appear!',
-      [{ text: 'OK' }]
-    );
+  const handleTestNotification = async () => {
+    try {
+      const notificationId = await sendTestNotification();
+      if (notificationId) {
+        Alert.alert(
+          'Test Notification Sent',
+          'A test notification has been sent! Check your notification panel.',
+          [{ text: 'OK' }]
+        );
+      } else {
+        Alert.alert(
+          'Error',
+          'Failed to send test notification. Please check notification permissions.',
+          [{ text: 'OK' }]
+        );
+      }
+    } catch (error) {
+      console.error('Error sending test notification:', error);
+      Alert.alert(
+        'Error',
+        'An error occurred while sending the test notification.',
+        [{ text: 'OK' }]
+      );
+    }
   };
 
   // Format time for display
@@ -136,7 +157,10 @@ export default function SettingsScreen() {
                   styles.cadenceOption,
                   notificationCadence === option.value && styles.cadenceOptionSelected,
                 ]}
-                onPress={() => setNotificationCadence(option.value)}
+                onPress={async () => {
+                  setNotificationCadence(option.value);
+                  await rescheduleNotification();
+                }}
                 activeOpacity={0.7}
               >
                 <View style={[
@@ -196,7 +220,10 @@ export default function SettingsScreen() {
                     styles.themeOption,
                     isSelected && styles.themeOptionSelected,
                   ]}
-                  onPress={() => toggleThemeBackground(theme.value)}
+                  onPress={async () => {
+                    toggleThemeBackground(theme.value);
+                    await rescheduleNotification();
+                  }}
                   activeOpacity={0.7}
                 >
                   <Ionicons
