@@ -133,5 +133,1355 @@
     "categories": ["self-worth", "empowerment"],
     "moods": ["angry", "motivated"],
     "backgroundStyle": "abstract"
+  },
+  {
+    "id": "16",
+    "text": "The best time to plant a tree was 20 years ago. The second best time is now.",
+    "author": "Chinese Proverb",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["action", "opportunity"],
+    "moods": ["motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "17",
+    "text": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "topics": ["wisdom", "courage"],
+    "categories": ["authenticity", "individuality"],
+    "moods": ["happy", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "18",
+    "text": "The only impossible journey is the one you never begin.",
+    "author": "Tony Robbins",
+    "topics": ["motivation", "courage"],
+    "categories": ["action", "dreams"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "19",
+    "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson",
+    "topics": ["wisdom", "courage"],
+    "categories": ["inner strength", "self-discovery"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "20",
+    "text": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["happiness", "responsibility"],
+    "moods": ["happy", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "21",
+    "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "author": "Nelson Mandela",
+    "topics": ["perseverance", "courage", "success"],
+    "categories": ["resilience", "triumph"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "22",
+    "text": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["presence", "acceptance"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "23",
+    "text": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "topics": ["motivation", "success"],
+    "categories": ["dreams", "belief"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "24",
+    "text": "It is during our darkest moments that we must focus to see the light.",
+    "author": "Aristotle",
+    "topics": ["courage", "wisdom"],
+    "categories": ["hope", "perseverance"],
+    "moods": ["sad", "anxious"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "25",
+    "text": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["presence", "meditation"],
+    "moods": ["peaceful", "anxious"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "26",
+    "text": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney",
+    "topics": ["motivation", "success"],
+    "categories": ["action", "productivity"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "27",
+    "text": "Love all, trust a few, do wrong to none.",
+    "author": "William Shakespeare",
+    "topics": ["love", "wisdom"],
+    "categories": ["relationships", "integrity"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "28",
+    "text": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "topics": ["motivation", "change"],
+    "categories": ["self-improvement", "choice"],
+    "moods": ["motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "29",
+    "text": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas Edison",
+    "topics": ["perseverance", "success"],
+    "categories": ["resilience", "learning"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "30",
+    "text": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["optimism", "perspective"],
+    "moods": ["happy", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "31",
+    "text": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt",
+    "topics": ["motivation", "success"],
+    "categories": ["belief", "confidence"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "32",
+    "text": "The mind is everything. What you think you become.",
+    "author": "Buddha",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["thoughts", "transformation"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "33",
+    "text": "Fall seven times and stand up eight.",
+    "author": "Japanese Proverb",
+    "topics": ["perseverance", "courage"],
+    "categories": ["resilience", "determination"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "34",
+    "text": "Everything you've ever wanted is on the other side of fear.",
+    "author": "George Addair",
+    "topics": ["courage", "motivation"],
+    "categories": ["fear", "breakthrough"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "35",
+    "text": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis",
+    "topics": ["motivation", "change"],
+    "categories": ["dreams", "reinvention"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "36",
+    "text": "The wound is the place where the Light enters you.",
+    "author": "Rumi",
+    "topics": ["wisdom", "courage"],
+    "categories": ["healing", "transformation"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "37",
+    "text": "Act as if what you do makes a difference. It does.",
+    "author": "William James",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["impact", "purpose"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "38",
+    "text": "We cannot change what we are not aware of, and once we are aware, we cannot help but change.",
+    "author": "Sheryl Sandberg",
+    "topics": ["change", "wisdom"],
+    "categories": ["awareness", "growth"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "39",
+    "text": "Out of difficulties grow miracles.",
+    "author": "Jean de La Bruyère",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["adversity", "transformation"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "40",
+    "text": "The best revenge is massive success.",
+    "author": "Frank Sinatra",
+    "topics": ["success", "motivation"],
+    "categories": ["achievement", "vindication"],
+    "moods": ["angry", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "41",
+    "text": "Life shrinks or expands in proportion to one's courage.",
+    "author": "Anaïs Nin",
+    "topics": ["courage", "wisdom"],
+    "categories": ["bravery", "living fully"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "42",
+    "text": "Not all those who wander are lost.",
+    "author": "J.R.R. Tolkien",
+    "topics": ["wisdom", "courage"],
+    "categories": ["journey", "exploration"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "43",
+    "text": "The greatest weapon against stress is our ability to choose one thought over another.",
+    "author": "William James",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["mental health", "choice"],
+    "moods": ["anxious", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "44",
+    "text": "To live is the rarest thing in the world. Most people exist, that is all.",
+    "author": "Oscar Wilde",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["living fully", "authenticity"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "45",
+    "text": "The only way out is through.",
+    "author": "Robert Frost",
+    "topics": ["courage", "perseverance"],
+    "categories": ["resilience", "facing challenges"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "46",
+    "text": "What we think, we become.",
+    "author": "Buddha",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["thoughts", "manifestation"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "47",
+    "text": "Joy is not in things; it is in us.",
+    "author": "Richard Wagner",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["happiness", "inner peace"],
+    "moods": ["happy", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "48",
+    "text": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain",
+    "topics": ["motivation", "success"],
+    "categories": ["action", "beginning"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "49",
+    "text": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey",
+    "topics": ["wisdom", "perseverance"],
+    "categories": ["healing", "growth"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "50",
+    "text": "Love yourself first and everything else falls into line.",
+    "author": "Lucille Ball",
+    "topics": ["love", "wisdom"],
+    "categories": ["self-love", "foundation"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "51",
+    "text": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "topics": ["change", "motivation"],
+    "categories": ["leadership", "action"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "52",
+    "text": "Don't watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson",
+    "topics": ["perseverance", "motivation"],
+    "categories": ["persistence", "action"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "53",
+    "text": "In three words I can sum up everything I've learned about life: it goes on.",
+    "author": "Robert Frost",
+    "topics": ["wisdom", "perseverance"],
+    "categories": ["resilience", "acceptance"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "54",
+    "text": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates",
+    "topics": ["wisdom"],
+    "categories": ["philosophy", "humility"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "55",
+    "text": "A journey of a thousand miles begins with a single step.",
+    "author": "Lao Tzu",
+    "topics": ["motivation", "courage"],
+    "categories": ["beginning", "action"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "56",
+    "text": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius",
+    "topics": ["perseverance", "motivation"],
+    "categories": ["persistence", "patience"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "57",
+    "text": "Our greatest glory is not in never falling, but in rising every time we fall.",
+    "author": "Confucius",
+    "topics": ["perseverance", "courage"],
+    "categories": ["resilience", "recovery"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "58",
+    "text": "The present moment is the only moment available to us, and it is the door to all moments.",
+    "author": "Thich Nhat Hanh",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["presence", "awareness"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "59",
+    "text": "Wherever you go, go with all your heart.",
+    "author": "Confucius",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["passion", "commitment"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "60",
+    "text": "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+    "author": "Helen Keller",
+    "topics": ["love", "wisdom"],
+    "categories": ["emotions", "beauty"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "61",
+    "text": "Do one thing every day that scares you.",
+    "author": "Eleanor Roosevelt",
+    "topics": ["courage", "motivation"],
+    "categories": ["bravery", "growth"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "62",
+    "text": "Well done is better than well said.",
+    "author": "Benjamin Franklin",
+    "topics": ["success", "motivation"],
+    "categories": ["action", "achievement"],
+    "moods": ["motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "63",
+    "text": "The way I see it, if you want the rainbow, you gotta put up with the rain.",
+    "author": "Dolly Parton",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["patience", "reward"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "64",
+    "text": "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.",
+    "author": "Bill Keane",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["presence", "gratitude"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "65",
+    "text": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington",
+    "topics": ["wisdom", "love"],
+    "categories": ["service", "kindness"],
+    "moods": ["grateful", "happy"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "66",
+    "text": "I am not a product of my circumstances. I am a product of my decisions.",
+    "author": "Stephen Covey",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["responsibility", "empowerment"],
+    "moods": ["motivated", "angry"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "67",
+    "text": "The most common way people give up their power is by thinking they don't have any.",
+    "author": "Alice Walker",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["empowerment", "awareness"],
+    "moods": ["motivated", "angry"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "68",
+    "text": "Remember that not getting what you want is sometimes a wonderful stroke of luck.",
+    "author": "Dalai Lama",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["acceptance", "perspective"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "69",
+    "text": "You can't use up creativity. The more you use, the more you have.",
+    "author": "Maya Angelou",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["creativity", "abundance"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "70",
+    "text": "The most difficult thing is the decision to act, the rest is merely tenacity.",
+    "author": "Amelia Earhart",
+    "topics": ["courage", "perseverance"],
+    "categories": ["action", "determination"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "71",
+    "text": "Happiness is not by chance, but by choice.",
+    "author": "Jim Rohn",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["happiness", "choice"],
+    "moods": ["happy", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "72",
+    "text": "Everything has beauty, but not everyone can see.",
+    "author": "Confucius",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["perspective", "beauty"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "73",
+    "text": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi",
+    "topics": ["motivation", "success"],
+    "categories": ["action", "responsibility"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "74",
+    "text": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein",
+    "topics": ["wisdom", "success"],
+    "categories": ["purpose", "contribution"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "75",
+    "text": "Two roads diverged in a wood, and I—I took the one less traveled by, and that has made all the difference.",
+    "author": "Robert Frost",
+    "topics": ["courage", "change"],
+    "categories": ["choice", "individuality"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "76",
+    "text": "You miss 100% of the shots you don't take.",
+    "author": "Wayne Gretzky",
+    "topics": ["motivation", "courage"],
+    "categories": ["action", "opportunity"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "77",
+    "text": "Whether you think you can or you think you can't, you're right.",
+    "author": "Henry Ford",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["belief", "mindset"],
+    "moods": ["motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "78",
+    "text": "The two most important days in your life are the day you are born and the day you find out why.",
+    "author": "Mark Twain",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["purpose", "meaning"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "79",
+    "text": "I alone cannot change the world, but I can cast a stone across the water to create many ripples.",
+    "author": "Mother Teresa",
+    "topics": ["motivation", "change"],
+    "categories": ["impact", "influence"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "80",
+    "text": "Perfection is not attainable, but if we chase perfection we can catch excellence.",
+    "author": "Vince Lombardi",
+    "topics": ["success", "wisdom"],
+    "categories": ["excellence", "standards"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "81",
+    "text": "Life is 10% what happens to me and 90% of how I react to it.",
+    "author": "Charles Swindoll",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["perspective", "response"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "82",
+    "text": "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
+    "author": "Henry Ford",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["adversity", "encouragement"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "83",
+    "text": "It's not whether you get knocked down, it's whether you get up.",
+    "author": "Vince Lombardi",
+    "topics": ["perseverance", "courage"],
+    "categories": ["resilience", "determination"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "84",
+    "text": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "topics": ["motivation", "success"],
+    "categories": ["belief", "potential"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "85",
+    "text": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson",
+    "topics": ["courage", "wisdom"],
+    "categories": ["authenticity", "individuality"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "86",
+    "text": "Do what you can with all you have, wherever you are.",
+    "author": "Theodore Roosevelt",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["action", "resourcefulness"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "87",
+    "text": "The only thing we have to fear is fear itself.",
+    "author": "Franklin D. Roosevelt",
+    "topics": ["courage", "wisdom"],
+    "categories": ["fear", "bravery"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "88",
+    "text": "We become what we think about most of the time, and that's the strangest secret.",
+    "author": "Earl Nightingale",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["thoughts", "manifestation"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "89",
+    "text": "Life isn't about finding yourself. Life is about creating yourself.",
+    "author": "George Bernard Shaw",
+    "topics": ["motivation", "change"],
+    "categories": ["self-creation", "identity"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "90",
+    "text": "The person who says it cannot be done should not interrupt the person who is doing it.",
+    "author": "Chinese Proverb",
+    "topics": ["motivation", "courage"],
+    "categories": ["action", "determination"],
+    "moods": ["motivated", "angry"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "91",
+    "text": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+    "author": "A.A. Milne",
+    "topics": ["courage", "wisdom"],
+    "categories": ["self-belief", "encouragement"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "92",
+    "text": "In the end, we only regret the chances we didn't take.",
+    "author": "Lewis Carroll",
+    "topics": ["courage", "wisdom"],
+    "categories": ["regret", "opportunity"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "93",
+    "text": "The best way to predict the future is to create it.",
+    "author": "Peter Drucker",
+    "topics": ["motivation", "success"],
+    "categories": ["action", "creation"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "94",
+    "text": "When one door of happiness closes, another opens, but often we look so long at the closed door that we do not see the one that has been opened for us.",
+    "author": "Helen Keller",
+    "topics": ["wisdom", "change"],
+    "categories": ["opportunity", "perspective"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "95",
+    "text": "Nothing is impossible. The word itself says 'I'm possible!'",
+    "author": "Audrey Hepburn",
+    "topics": ["motivation", "courage"],
+    "categories": ["possibility", "optimism"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "96",
+    "text": "There is no passion to be found playing small—in settling for a life that is less than the one you are capable of living.",
+    "author": "Nelson Mandela",
+    "topics": ["motivation", "courage"],
+    "categories": ["potential", "ambition"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "97",
+    "text": "The cave you fear to enter holds the treasure you seek.",
+    "author": "Joseph Campbell",
+    "topics": ["courage", "wisdom"],
+    "categories": ["fear", "growth"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "98",
+    "text": "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
+    "author": "Oprah Winfrey",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["gratitude", "perspective"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "99",
+    "text": "It is never too late to be what you might have been.",
+    "author": "George Eliot",
+    "topics": ["motivation", "change"],
+    "categories": ["potential", "reinvention"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "100",
+    "text": "A person who never made a mistake never tried anything new.",
+    "author": "Albert Einstein",
+    "topics": ["courage", "wisdom"],
+    "categories": ["learning", "experimentation"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "101",
+    "text": "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    "author": "Benjamin Franklin",
+    "topics": ["wisdom"],
+    "categories": ["learning", "experience"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "102",
+    "text": "The question isn't who is going to let me; it's who is going to stop me.",
+    "author": "Ayn Rand",
+    "topics": ["courage", "motivation"],
+    "categories": ["determination", "independence"],
+    "moods": ["motivated", "angry"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "103",
+    "text": "Happiness depends upon ourselves.",
+    "author": "Aristotle",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["happiness", "responsibility"],
+    "moods": ["happy", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "104",
+    "text": "Life is a succession of lessons which must be lived to be understood.",
+    "author": "Ralph Waldo Emerson",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["experience", "learning"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "105",
+    "text": "Your time is limited, don't waste it living someone else's life.",
+    "author": "Steve Jobs",
+    "topics": ["courage", "wisdom"],
+    "categories": ["authenticity", "time"],
+    "moods": ["motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "106",
+    "text": "An unexamined life is not worth living.",
+    "author": "Socrates",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["reflection", "meaning"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "107",
+    "text": "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.",
+    "author": "Steve Jobs",
+    "topics": ["success", "motivation"],
+    "categories": ["career", "fulfillment"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "108",
+    "text": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+    "author": "Maya Angelou",
+    "topics": ["love", "wisdom"],
+    "categories": ["relationships", "impact"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "109",
+    "text": "Try to be a rainbow in someone's cloud.",
+    "author": "Maya Angelou",
+    "topics": ["love", "wisdom"],
+    "categories": ["kindness", "compassion"],
+    "moods": ["grateful", "happy"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "110",
+    "text": "We can complain because rose bushes have thorns, or rejoice because thorns have roses.",
+    "author": "Alphonse Karr",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["perspective", "optimism"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "111",
+    "text": "Start where you are. Use what you have. Do what you can.",
+    "author": "Arthur Ashe",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["action", "resourcefulness"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "112",
+    "text": "To handle yourself, use your head; to handle others, use your heart.",
+    "author": "Eleanor Roosevelt",
+    "topics": ["wisdom", "love"],
+    "categories": ["relationships", "leadership"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "113",
+    "text": "The greatest discovery of all time is that a person can change his future by merely changing his attitude.",
+    "author": "Oprah Winfrey",
+    "topics": ["change", "wisdom"],
+    "categories": ["mindset", "transformation"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "114",
+    "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    "author": "Aristotle",
+    "topics": ["success", "wisdom"],
+    "categories": ["habits", "excellence"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "115",
+    "text": "A room without books is like a body without a soul.",
+    "author": "Marcus Tullius Cicero",
+    "topics": ["wisdom"],
+    "categories": ["knowledge", "learning"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "116",
+    "text": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "topics": ["perseverance", "motivation"],
+    "categories": ["possibility", "achievement"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "117",
+    "text": "What we fear doing most is usually what we most need to do.",
+    "author": "Tim Ferriss",
+    "topics": ["courage", "wisdom"],
+    "categories": ["fear", "growth"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "118",
+    "text": "Challenges are what make life interesting and overcoming them is what makes life meaningful.",
+    "author": "Joshua J. Marine",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["challenges", "meaning"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "119",
+    "text": "The most wasted of days is one without laughter.",
+    "author": "E.E. Cummings",
+    "topics": ["wisdom"],
+    "categories": ["joy", "living fully"],
+    "moods": ["happy", "grateful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "120",
+    "text": "If you want to go fast, go alone. If you want to go far, go together.",
+    "author": "African Proverb",
+    "topics": ["wisdom", "love"],
+    "categories": ["teamwork", "relationships"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "121",
+    "text": "Don't cry because it's over, smile because it happened.",
+    "author": "Dr. Seuss",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["gratitude", "acceptance"],
+    "moods": ["sad", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "122",
+    "text": "Go confidently in the direction of your dreams. Live the life you have imagined.",
+    "author": "Henry David Thoreau",
+    "topics": ["motivation", "courage"],
+    "categories": ["dreams", "confidence"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "123",
+    "text": "Success is stumbling from failure to failure with no loss of enthusiasm.",
+    "author": "Winston Churchill",
+    "topics": ["perseverance", "success"],
+    "categories": ["resilience", "attitude"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "124",
+    "text": "The privilege of a lifetime is to become who you truly are.",
+    "author": "Carl Jung",
+    "topics": ["wisdom", "courage"],
+    "categories": ["self-discovery", "authenticity"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "125",
+    "text": "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+    "author": "Roy T. Bennett",
+    "topics": ["courage", "motivation"],
+    "categories": ["fear", "dreams"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "126",
+    "text": "When we are no longer able to change a situation, we are challenged to change ourselves.",
+    "author": "Viktor Frankl",
+    "topics": ["change", "wisdom"],
+    "categories": ["acceptance", "adaptation"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "127",
+    "text": "The only source of knowledge is experience.",
+    "author": "Albert Einstein",
+    "topics": ["wisdom"],
+    "categories": ["knowledge", "experience"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "128",
+    "text": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author": "Mahatma Gandhi",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["living fully", "learning"],
+    "moods": ["motivated", "grateful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "129",
+    "text": "That which does not kill us makes us stronger.",
+    "author": "Friedrich Nietzsche",
+    "topics": ["perseverance", "courage"],
+    "categories": ["resilience", "strength"],
+    "moods": ["motivated", "angry"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "130",
+    "text": "Whatever the mind of man can conceive and believe, it can achieve.",
+    "author": "Napoleon Hill",
+    "topics": ["success", "motivation"],
+    "categories": ["belief", "achievement"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "131",
+    "text": "The journey of a thousand miles begins with one step.",
+    "author": "Lao Tzu",
+    "topics": ["motivation", "courage"],
+    "categories": ["beginning", "perseverance"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "132",
+    "text": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+    "author": "Zig Ziglar",
+    "topics": ["success", "wisdom"],
+    "categories": ["growth", "transformation"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "133",
+    "text": "Life is really simple, but we insist on making it complicated.",
+    "author": "Confucius",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["simplicity", "perspective"],
+    "moods": ["peaceful", "grateful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "134",
+    "text": "May you live every day of your life.",
+    "author": "Jonathan Swift",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["living fully", "presence"],
+    "moods": ["grateful", "happy"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "135",
+    "text": "He who has a why to live can bear almost any how.",
+    "author": "Friedrich Nietzsche",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["purpose", "resilience"],
+    "moods": ["motivated", "sad"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "136",
+    "text": "Courage is grace under pressure.",
+    "author": "Ernest Hemingway",
+    "topics": ["courage", "wisdom"],
+    "categories": ["bravery", "composure"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "137",
+    "text": "We must be willing to let go of the life we planned so as to have the life that is waiting for us.",
+    "author": "Joseph Campbell",
+    "topics": ["change", "wisdom"],
+    "categories": ["acceptance", "letting go"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "138",
+    "text": "The only impossible journey is the one you never begin.",
+    "author": "Tony Robbins",
+    "topics": ["motivation", "courage"],
+    "categories": ["beginning", "action"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "139",
+    "text": "In this life we cannot do great things. We can only do small things with great love.",
+    "author": "Mother Teresa",
+    "topics": ["love", "wisdom"],
+    "categories": ["service", "compassion"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "140",
+    "text": "Life is 10% what happens to you and 90% how you react to it.",
+    "author": "Charles R. Swindoll",
+    "topics": ["wisdom", "mindfulness"],
+    "categories": ["perspective", "response"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "141",
+    "text": "The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.",
+    "author": "Bob Marley",
+    "topics": ["love", "wisdom"],
+    "categories": ["relationships", "acceptance"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "142",
+    "text": "Don't let yesterday take up too much of today.",
+    "author": "Will Rogers",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["presence", "letting go"],
+    "moods": ["peaceful", "motivated"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "143",
+    "text": "The difference between winning and losing is most often not quitting.",
+    "author": "Walt Disney",
+    "topics": ["perseverance", "success"],
+    "categories": ["persistence", "determination"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "144",
+    "text": "You can't go back and change the beginning, but you can start where you are and change the ending.",
+    "author": "C.S. Lewis",
+    "topics": ["change", "motivation"],
+    "categories": ["new beginnings", "empowerment"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "145",
+    "text": "Be kind whenever possible. It is always possible.",
+    "author": "Dalai Lama",
+    "topics": ["love", "wisdom"],
+    "categories": ["kindness", "compassion"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "146",
+    "text": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    "author": "Ralph Waldo Emerson",
+    "topics": ["courage", "change"],
+    "categories": ["innovation", "leadership"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "147",
+    "text": "The meaning of life is to find your gift. The purpose of life is to give it away.",
+    "author": "Pablo Picasso",
+    "topics": ["wisdom", "love"],
+    "categories": ["purpose", "contribution"],
+    "moods": ["grateful", "peaceful"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "148",
+    "text": "Everything you can imagine is real.",
+    "author": "Pablo Picasso",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["imagination", "possibility"],
+    "moods": ["motivated", "happy"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "149",
+    "text": "I have learned over the years that when one's mind is made up, this diminishes fear.",
+    "author": "Rosa Parks",
+    "topics": ["courage", "wisdom"],
+    "categories": ["determination", "fear"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "150",
+    "text": "The bad news is time flies. The good news is you're the pilot.",
+    "author": "Michael Altshuler",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["time", "control"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "151",
+    "text": "Doubt kills more dreams than failure ever will.",
+    "author": "Suzy Kassem",
+    "topics": ["courage", "motivation"],
+    "categories": ["belief", "dreams"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "152",
+    "text": "The scariest moment is always just before you start.",
+    "author": "Stephen King",
+    "topics": ["courage", "motivation"],
+    "categories": ["beginning", "fear"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "153",
+    "text": "You are the one that possesses the keys to your being. You carry the passport to your own happiness.",
+    "author": "Diane von Furstenberg",
+    "topics": ["wisdom", "motivation"],
+    "categories": ["empowerment", "happiness"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "154",
+    "text": "The seed of suffering in you may be strong, but don't wait until you have no more suffering before allowing yourself to be happy.",
+    "author": "Thich Nhat Hanh",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["happiness", "acceptance"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "155",
+    "text": "Don't be afraid to give up the good to go for the great.",
+    "author": "John D. Rockefeller",
+    "topics": ["success", "courage"],
+    "categories": ["ambition", "excellence"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "156",
+    "text": "The real test is not whether you avoid this failure, because you won't. It's whether you let it harden or shame you into inaction, or whether you learn from it.",
+    "author": "Barack Obama",
+    "topics": ["perseverance", "wisdom"],
+    "categories": ["failure", "learning"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "157",
+    "text": "You cannot have a positive life and a negative mind.",
+    "author": "Joyce Meyer",
+    "topics": ["mindfulness", "wisdom"],
+    "categories": ["mindset", "positivity"],
+    "moods": ["motivated", "peaceful"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "158",
+    "text": "Sometimes the wrong choices bring us to the right places.",
+    "author": "Unknown",
+    "topics": ["wisdom", "change"],
+    "categories": ["perspective", "journey"],
+    "moods": ["sad", "peaceful"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "159",
+    "text": "Be strong enough to stand alone, smart enough to know when you need help, and brave enough to ask for it.",
+    "author": "Unknown",
+    "topics": ["courage", "wisdom"],
+    "categories": ["strength", "humility"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "160",
+    "text": "If opportunity doesn't knock, build a door.",
+    "author": "Milton Berle",
+    "topics": ["motivation", "courage"],
+    "categories": ["opportunity", "initiative"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "161",
+    "text": "Stars can't shine without darkness.",
+    "author": "Unknown",
+    "topics": ["wisdom", "perseverance"],
+    "categories": ["adversity", "hope"],
+    "moods": ["sad", "motivated"],
+    "backgroundStyle": "abstract"
+  },
+  {
+    "id": "162",
+    "text": "The only place where success comes before work is in the dictionary.",
+    "author": "Vidal Sassoon",
+    "topics": ["success", "motivation"],
+    "categories": ["work ethic", "achievement"],
+    "moods": ["motivated"],
+    "backgroundStyle": "urban"
+  },
+  {
+    "id": "163",
+    "text": "Every accomplishment starts with the decision to try.",
+    "author": "Unknown",
+    "topics": ["motivation", "courage"],
+    "categories": ["action", "beginning"],
+    "moods": ["motivated", "anxious"],
+    "backgroundStyle": "nature"
+  },
+  {
+    "id": "164",
+    "text": "Your limitation—it's only your imagination.",
+    "author": "Unknown",
+    "topics": ["motivation", "wisdom"],
+    "categories": ["potential", "mindset"],
+    "moods": ["motivated"],
+    "backgroundStyle": "minimal"
+  },
+  {
+    "id": "165",
+    "text": "Great things never come from comfort zones.",
+    "author": "Unknown",
+    "topics": ["courage", "motivation"],
+    "categories": ["growth", "challenge"],
+    "moods": ["anxious", "motivated"],
+    "backgroundStyle": "urban"
   }
 ]
