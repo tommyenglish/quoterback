@@ -6,7 +6,7 @@
     "topics": ["motivation", "courage"],
     "categories": ["inspiration", "empowerment"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "minimal"
+    "backgroundStyle": "minimalist1"
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "topics": ["wisdom", "courage"],
     "categories": ["philosophy", "resilience"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "urban"
+    "backgroundStyle": "architecture1"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "topics": ["success", "courage", "motivation"],
     "categories": ["perseverance", "inspiration"],
     "moods": ["motivated"],
-    "backgroundStyle": "urban"
+    "backgroundStyle": "urban1"
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["gratitude", "contentment"],
     "moods": ["grateful", "peaceful"],
-    "backgroundStyle": "nature"
+    "backgroundStyle": "nature1"
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["meditation", "awareness"],
     "moods": ["peaceful", "grateful"],
-    "backgroundStyle": "minimal"
+    "backgroundStyle": "minimalist2"
   },
   {
     "id": "6",
@@ -51,7 +51,7 @@
     "topics": ["courage", "wisdom"],
     "categories": ["mental health", "healing"],
     "moods": ["sad", "anxious"],
-    "backgroundStyle": "abstract"
+    "backgroundStyle": "vintage1"
   },
   {
     "id": "7",
@@ -60,7 +60,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["inner peace", "spirituality"],
     "moods": ["peaceful"],
-    "backgroundStyle": "minimal"
+    "backgroundStyle": "space1"
   },
   {
     "id": "8",
@@ -69,7 +69,7 @@
     "topics": ["success", "motivation", "wisdom"],
     "categories": ["career", "passion"],
     "moods": ["motivated"],
-    "backgroundStyle": "urban"
+    "backgroundStyle": "urban2"
   },
   {
     "id": "9",
@@ -78,7 +78,7 @@
     "topics": ["wisdom", "mindfulness"],
     "categories": ["emotions", "self-control"],
     "moods": ["angry"],
-    "backgroundStyle": "abstract"
+    "backgroundStyle": "blackAndWhite1"
   },
   {
     "id": "10",
@@ -87,7 +87,7 @@
     "topics": ["mindfulness", "motivation"],
     "categories": ["fresh start", "presence"],
     "moods": ["motivated", "peaceful"],
-    "backgroundStyle": "nature"
+    "backgroundStyle": "nature2"
   },
   {
     "id": "11",
@@ -96,7 +96,7 @@
     "topics": ["mindfulness", "wisdom"],
     "categories": ["gratitude", "abundance"],
     "moods": ["grateful", "peaceful"],
-    "backgroundStyle": "nature"
+    "backgroundStyle": "nature3"
   },
   {
     "id": "12",
@@ -105,7 +105,7 @@
     "topics": ["wisdom"],
     "categories": ["emotions", "healing"],
     "moods": ["sad"],
-    "backgroundStyle": "abstract"
+    "backgroundStyle": "textures1"
   },
   {
     "id": "13",
@@ -114,7 +114,7 @@
     "topics": ["courage", "motivation", "wisdom"],
     "categories": ["bravery", "living fully"],
     "moods": ["motivated", "anxious"],
-    "backgroundStyle": "urban"
+    "backgroundStyle": "art1"
   },
   {
     "id": "14",
@@ -123,7 +123,7 @@
     "topics": ["mindfulness", "courage"],
     "categories": ["self-acceptance", "calm"],
     "moods": ["anxious", "peaceful"],
-    "backgroundStyle": "minimal"
+    "backgroundStyle": "minimalist3"
   },
   {
     "id": "15",
@@ -132,6 +132,6 @@
     "topics": ["wisdom", "courage", "motivation"],
     "categories": ["self-worth", "empowerment"],
     "moods": ["angry", "motivated"],
-    "backgroundStyle": "abstract"
+    "backgroundStyle": "art2"
   }
 ]
