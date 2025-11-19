@@ -8,6 +8,9 @@ const DEFAULT_SETTINGS = {
   notificationTime: new Date(new Date().setHours(9, 0, 0, 0)).toISOString(), // 9:00 AM
   notificationCadence: 'daily', // 'daily', 'everyOtherDay', 'weekly'
   themeBackgrounds: ['nature', 'space'], // Array of selected themes
+  notificationAuthors: [], // Array of preferred authors for notifications (empty = all)
+  notificationTopics: [], // Array of preferred topics for notifications (empty = all)
+  notificationMoods: [], // Array of preferred moods for notifications (empty = all)
 };
 
 const useSettingsStore = create((set, get) => ({
@@ -15,6 +18,9 @@ const useSettingsStore = create((set, get) => ({
   notificationTime: DEFAULT_SETTINGS.notificationTime,
   notificationCadence: DEFAULT_SETTINGS.notificationCadence,
   themeBackgrounds: DEFAULT_SETTINGS.themeBackgrounds,
+  notificationAuthors: DEFAULT_SETTINGS.notificationAuthors,
+  notificationTopics: DEFAULT_SETTINGS.notificationTopics,
+  notificationMoods: DEFAULT_SETTINGS.notificationMoods,
   isLoaded: false,
 
   // Initialize and load settings from AsyncStorage
@@ -33,6 +39,17 @@ const useSettingsStore = create((set, get) => ({
         // Ensure themeBackgrounds is an array with at least one theme
         if (!parsedSettings.themeBackgrounds || parsedSettings.themeBackgrounds.length === 0) {
           parsedSettings.themeBackgrounds = DEFAULT_SETTINGS.themeBackgrounds;
+        }
+
+        // Ensure notification filter arrays exist (default to empty arrays)
+        if (!parsedSettings.notificationAuthors) {
+          parsedSettings.notificationAuthors = DEFAULT_SETTINGS.notificationAuthors;
+        }
+        if (!parsedSettings.notificationTopics) {
+          parsedSettings.notificationTopics = DEFAULT_SETTINGS.notificationTopics;
+        }
+        if (!parsedSettings.notificationMoods) {
+          parsedSettings.notificationMoods = DEFAULT_SETTINGS.notificationMoods;
         }
 
         set({
@@ -66,6 +83,9 @@ const useSettingsStore = create((set, get) => ({
       notificationTime: time,
       notificationCadence: currentSettings.notificationCadence,
       themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: currentSettings.notificationAuthors,
+      notificationTopics: currentSettings.notificationTopics,
+      notificationMoods: currentSettings.notificationMoods,
     };
 
     set({ notificationTime: time });
@@ -81,6 +101,9 @@ const useSettingsStore = create((set, get) => ({
       notificationTime: currentSettings.notificationTime,
       notificationCadence: cadence,
       themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: currentSettings.notificationAuthors,
+      notificationTopics: currentSettings.notificationTopics,
+      notificationMoods: currentSettings.notificationMoods,
     };
 
     set({ notificationCadence: cadence });
@@ -107,6 +130,9 @@ const useSettingsStore = create((set, get) => ({
       notificationTime: currentSettings.notificationTime,
       notificationCadence: currentSettings.notificationCadence,
       themeBackgrounds: updatedThemes,
+      notificationAuthors: currentSettings.notificationAuthors,
+      notificationTopics: currentSettings.notificationTopics,
+      notificationMoods: currentSettings.notificationMoods,
     };
 
     set({ themeBackgrounds: updatedThemes });
@@ -119,6 +145,103 @@ const useSettingsStore = create((set, get) => ({
     return themeBackgrounds.includes(theme);
   },
 
+  // Toggle notification author filter
+  toggleNotificationAuthor: (author) => {
+    const { saveSettings, notificationAuthors } = get();
+    const currentSettings = get();
+
+    let updatedAuthors;
+    if (notificationAuthors.includes(author)) {
+      updatedAuthors = notificationAuthors.filter((a) => a !== author);
+    } else {
+      updatedAuthors = [...notificationAuthors, author];
+    }
+
+    const updatedSettings = {
+      notificationTime: currentSettings.notificationTime,
+      notificationCadence: currentSettings.notificationCadence,
+      themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: updatedAuthors,
+      notificationTopics: currentSettings.notificationTopics,
+      notificationMoods: currentSettings.notificationMoods,
+    };
+
+    set({ notificationAuthors: updatedAuthors });
+    saveSettings(updatedSettings);
+  },
+
+  // Toggle notification topic filter
+  toggleNotificationTopic: (topic) => {
+    const { saveSettings, notificationTopics } = get();
+    const currentSettings = get();
+
+    let updatedTopics;
+    if (notificationTopics.includes(topic)) {
+      updatedTopics = notificationTopics.filter((t) => t !== topic);
+    } else {
+      updatedTopics = [...notificationTopics, topic];
+    }
+
+    const updatedSettings = {
+      notificationTime: currentSettings.notificationTime,
+      notificationCadence: currentSettings.notificationCadence,
+      themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: currentSettings.notificationAuthors,
+      notificationTopics: updatedTopics,
+      notificationMoods: currentSettings.notificationMoods,
+    };
+
+    set({ notificationTopics: updatedTopics });
+    saveSettings(updatedSettings);
+  },
+
+  // Toggle notification mood filter
+  toggleNotificationMood: (mood) => {
+    const { saveSettings, notificationMoods } = get();
+    const currentSettings = get();
+
+    let updatedMoods;
+    if (notificationMoods.includes(mood)) {
+      updatedMoods = notificationMoods.filter((m) => m !== mood);
+    } else {
+      updatedMoods = [...notificationMoods, mood];
+    }
+
+    const updatedSettings = {
+      notificationTime: currentSettings.notificationTime,
+      notificationCadence: currentSettings.notificationCadence,
+      themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: currentSettings.notificationAuthors,
+      notificationTopics: currentSettings.notificationTopics,
+      notificationMoods: updatedMoods,
+    };
+
+    set({ notificationMoods: updatedMoods });
+    saveSettings(updatedSettings);
+  },
+
+  // Clear all notification filters
+  clearNotificationFilters: () => {
+    const { saveSettings } = get();
+    const currentSettings = get();
+
+    const updatedSettings = {
+      notificationTime: currentSettings.notificationTime,
+      notificationCadence: currentSettings.notificationCadence,
+      themeBackgrounds: currentSettings.themeBackgrounds,
+      notificationAuthors: [],
+      notificationTopics: [],
+      notificationMoods: [],
+    };
+
+    set({
+      notificationAuthors: [],
+      notificationTopics: [],
+      notificationMoods: [],
+    });
+    saveSettings(updatedSettings);
+  },
+
   // Reset to default settings
   resetSettings: () => {
     const { saveSettings } = get();
@@ -126,6 +249,9 @@ const useSettingsStore = create((set, get) => ({
       notificationTime: DEFAULT_SETTINGS.notificationTime,
       notificationCadence: DEFAULT_SETTINGS.notificationCadence,
       themeBackgrounds: DEFAULT_SETTINGS.themeBackgrounds,
+      notificationAuthors: DEFAULT_SETTINGS.notificationAuthors,
+      notificationTopics: DEFAULT_SETTINGS.notificationTopics,
+      notificationMoods: DEFAULT_SETTINGS.notificationMoods,
     });
     saveSettings(DEFAULT_SETTINGS);
   },
