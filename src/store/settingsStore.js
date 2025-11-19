@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
 
 const SETTINGS_STORAGE_KEY = '@quoterback_settings';
 
@@ -45,6 +46,12 @@ const useSettingsStore = create((set, get) => ({
     } catch (error) {
       console.error('Error loading settings from AsyncStorage:', error);
       set({ isLoaded: true });
+      // Show user-friendly error message
+      Alert.alert(
+        'Settings Load Error',
+        'Unable to load your settings. Default settings will be used.',
+        [{ text: 'OK' }]
+      );
     }
   },
 
@@ -52,8 +59,16 @@ const useSettingsStore = create((set, get) => ({
   saveSettings: async (settings) => {
     try {
       await AsyncStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
+      return true;
     } catch (error) {
       console.error('Error saving settings to AsyncStorage:', error);
+      // Show user-friendly error message
+      Alert.alert(
+        'Settings Save Error',
+        'Unable to save your settings. Please try again.',
+        [{ text: 'OK' }]
+      );
+      return false;
     }
   },
 
@@ -61,6 +76,13 @@ const useSettingsStore = create((set, get) => ({
   setNotificationTime: (time) => {
     const { saveSettings } = get();
     const currentSettings = get();
+
+    // Validate time input
+    if (!time) {
+      console.error('Invalid notification time: time is null or undefined');
+      Alert.alert('Error', 'Invalid time selected. Please try again.');
+      return;
+    }
 
     const updatedSettings = {
       notificationTime: time,
@@ -77,6 +99,14 @@ const useSettingsStore = create((set, get) => ({
     const { saveSettings } = get();
     const currentSettings = get();
 
+    // Validate cadence input
+    const validCadences = ['daily', 'everyOtherDay', 'weekly'];
+    if (!validCadences.includes(cadence)) {
+      console.error('Invalid notification cadence:', cadence);
+      Alert.alert('Error', 'Invalid notification cadence selected.');
+      return;
+    }
+
     const updatedSettings = {
       notificationTime: currentSettings.notificationTime,
       notificationCadence: cadence,
@@ -92,10 +122,23 @@ const useSettingsStore = create((set, get) => ({
     const { saveSettings, themeBackgrounds } = get();
     const currentSettings = get();
 
+    // Validate theme input
+    const validThemes = ['nature', 'space', 'architecture', 'art', 'urban', 'vintage', 'blackAndWhite', 'textures', 'minimalist'];
+    if (!validThemes.includes(theme)) {
+      console.error('Invalid theme:', theme);
+      Alert.alert('Error', 'Invalid theme selected.');
+      return;
+    }
+
     let updatedThemes;
     if (themeBackgrounds.includes(theme)) {
       // Don't allow deselecting if it's the only theme
       if (themeBackgrounds.length === 1) {
+        Alert.alert(
+          'Cannot Deselect',
+          'At least one theme must be selected.',
+          [{ text: 'OK' }]
+        );
         return;
       }
       updatedThemes = themeBackgrounds.filter((t) => t !== theme);

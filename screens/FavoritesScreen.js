@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   Animated,
+  ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Swipeable } from 'react-native-gesture-handler';
@@ -13,14 +14,18 @@ import useFavoritesStore from '../src/store/favoritesStore';
 import { getAllQuotes } from '../src/services/quoteService';
 
 export default function FavoritesScreen({ navigation }) {
-  const { favorites, removeFavorite } = useFavoritesStore();
+  const { favorites, removeFavorite, isLoaded } = useFavoritesStore();
   const [favoriteQuotes, setFavoriteQuotes] = useState([]);
 
   useEffect(() => {
     // Get all quotes and filter for favorites
-    const allQuotes = getAllQuotes();
-    const favQuotes = allQuotes.filter((quote) => favorites.includes(quote.id));
-    setFavoriteQuotes(favQuotes);
+    try {
+      const allQuotes = getAllQuotes();
+      const favQuotes = allQuotes.filter((quote) => favorites.includes(quote.id));
+      setFavoriteQuotes(favQuotes);
+    } catch (error) {
+      console.error('Error loading favorite quotes:', error);
+    }
   }, [favorites]);
 
   const handleRemoveFavorite = (quoteId) => {
@@ -81,15 +86,26 @@ export default function FavoritesScreen({ navigation }) {
     </Swipeable>
   );
 
-  const renderEmptyState = () => (
-    <View style={styles.emptyContainer}>
-      <Ionicons name="heart-outline" size={80} color="#ccc" />
-      <Text style={styles.emptyTitle}>No favorites yet</Text>
-      <Text style={styles.emptySubtitle}>
-        Start adding quotes you love!
-      </Text>
-    </View>
-  );
+  const renderEmptyState = () => {
+    if (!isLoaded) {
+      return (
+        <View style={styles.emptyContainer}>
+          <ActivityIndicator size="large" color="#4CAF50" />
+          <Text style={styles.loadingText}>Loading favorites...</Text>
+        </View>
+      );
+    }
+
+    return (
+      <View style={styles.emptyContainer}>
+        <Ionicons name="heart-outline" size={80} color="#ccc" />
+        <Text style={styles.emptyTitle}>No favorites yet</Text>
+        <Text style={styles.emptySubtitle}>
+          Start adding quotes you love!
+        </Text>
+      </View>
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -191,5 +207,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#999',
     textAlign: 'center',
+  },
+  loadingText: {
+    marginTop: 16,
+    fontSize: 16,
+    color: '#666',
   },
 });

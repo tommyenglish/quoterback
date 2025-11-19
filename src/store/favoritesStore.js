@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
 
 const FAVORITES_STORAGE_KEY = '@quoterback_favorites';
 
@@ -13,13 +14,25 @@ const useFavoritesStore = create((set, get) => ({
       const storedFavorites = await AsyncStorage.getItem(FAVORITES_STORAGE_KEY);
       if (storedFavorites) {
         const parsedFavorites = JSON.parse(storedFavorites);
-        set({ favorites: parsedFavorites, isLoaded: true });
+        // Validate that parsedFavorites is an array
+        if (Array.isArray(parsedFavorites)) {
+          set({ favorites: parsedFavorites, isLoaded: true });
+        } else {
+          console.error('Favorites data is not an array, using empty array');
+          set({ favorites: [], isLoaded: true });
+        }
       } else {
         set({ isLoaded: true });
       }
     } catch (error) {
       console.error('Error loading favorites from AsyncStorage:', error);
       set({ isLoaded: true });
+      // Show user-friendly error message
+      Alert.alert(
+        'Favorites Load Error',
+        'Unable to load your favorite quotes. Your favorites list will be empty.',
+        [{ text: 'OK' }]
+      );
     }
   },
 
@@ -27,8 +40,16 @@ const useFavoritesStore = create((set, get) => ({
   saveFavorites: async (favorites) => {
     try {
       await AsyncStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+      return true;
     } catch (error) {
       console.error('Error saving favorites to AsyncStorage:', error);
+      // Show user-friendly error message
+      Alert.alert(
+        'Favorites Save Error',
+        'Unable to save your favorites. Please try again.',
+        [{ text: 'OK' }]
+      );
+      return false;
     }
   },
 

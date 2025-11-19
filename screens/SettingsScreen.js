@@ -50,6 +50,16 @@ export default function SettingsScreen() {
     }
 
     if (selectedDate) {
+      // Validate the selected date
+      if (!(selectedDate instanceof Date) || isNaN(selectedDate.getTime())) {
+        Alert.alert(
+          'Invalid Time',
+          'Please select a valid time.',
+          [{ text: 'OK' }]
+        );
+        return;
+      }
+
       setTempTime(selectedDate);
       if (event.type === 'set' || Platform.OS === 'ios') {
         setNotificationTime(selectedDate.toISOString());
@@ -59,9 +69,11 @@ export default function SettingsScreen() {
 
   // Handle test notification
   const handleTestNotification = () => {
+    // Note: Full notification implementation would require expo-notifications
+    // and proper permission handling. This is a placeholder.
     Alert.alert(
       'Test Notification',
-      'This is how your quote notification will appear!',
+      'This is how your quote notification will appear!\n\nNote: Actual push notifications are not yet implemented. This is a preview of the notification format.',
       [{ text: 'OK' }]
     );
   };

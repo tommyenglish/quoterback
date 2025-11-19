@@ -9,6 +9,7 @@ import {
   Platform,
   Modal,
   ScrollView,
+  ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { getAllQuotes } from '../src/services/quoteService';
@@ -34,12 +35,19 @@ export default function SearchScreen({ navigation }) {
   const [showAuthorsModal, setShowAuthorsModal] = useState(false);
   const [showTopicsModal, setShowTopicsModal] = useState(false);
   const [showMoodsModal, setShowMoodsModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Load all quotes when component mounts
-    const quotes = getAllQuotes();
-    setAllQuotes(quotes);
-    setFilteredQuotes(quotes);
+    try {
+      const quotes = getAllQuotes();
+      setAllQuotes(quotes);
+      setFilteredQuotes(quotes);
+    } catch (error) {
+      console.error('Error loading quotes in SearchScreen:', error);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   // Extract unique authors from all quotes
@@ -182,21 +190,32 @@ export default function SearchScreen({ navigation }) {
     </TouchableOpacity>
   );
 
-  const renderEmptyState = () => (
-    <View style={styles.emptyContainer}>
-      <Ionicons name="search-outline" size={80} color="#ccc" />
-      <Text style={styles.emptyTitle}>
-        {searchQuery || selectedAuthors.length > 0 || selectedTopics.length > 0 || selectedMoods.length > 0
-          ? 'No quotes found'
-          : 'Search for quotes'}
-      </Text>
-      <Text style={styles.emptySubtitle}>
-        {searchQuery || selectedAuthors.length > 0 || selectedTopics.length > 0 || selectedMoods.length > 0
-          ? 'Try adjusting your search or filters'
-          : 'Enter a keyword to search quotes and authors'}
-      </Text>
-    </View>
-  );
+  const renderEmptyState = () => {
+    if (isLoading) {
+      return (
+        <View style={styles.emptyContainer}>
+          <ActivityIndicator size="large" color="#4CAF50" />
+          <Text style={styles.loadingText}>Loading quotes...</Text>
+        </View>
+      );
+    }
+
+    return (
+      <View style={styles.emptyContainer}>
+        <Ionicons name="search-outline" size={80} color="#ccc" />
+        <Text style={styles.emptyTitle}>
+          {searchQuery || selectedAuthors.length > 0 || selectedTopics.length > 0 || selectedMoods.length > 0
+            ? 'No quotes found'
+            : 'Search for quotes'}
+        </Text>
+        <Text style={styles.emptySubtitle}>
+          {searchQuery || selectedAuthors.length > 0 || selectedTopics.length > 0 || selectedMoods.length > 0
+            ? 'Try adjusting your search or filters'
+            : 'Enter a keyword to search quotes and authors'}
+        </Text>
+      </View>
+    );
+  };
 
   const renderAuthorItem = ({ item: author }) => {
     const isSelected = selectedAuthors.includes(author);

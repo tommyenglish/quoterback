@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Share,
+  Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import QuoteCard from '../src/components/QuoteCard';
@@ -17,22 +18,42 @@ export default function QuoteDetailScreen({ route, navigation }) {
   const isQuoteFavorite = isFavorite(quote.id);
 
   const handleToggleFavorite = () => {
-    if (isQuoteFavorite) {
-      removeFavorite(quote.id);
-      // Optionally navigate back if unfavorited
-      navigation.goBack();
-    } else {
-      addFavorite(quote.id);
+    try {
+      if (isQuoteFavorite) {
+        removeFavorite(quote.id);
+        // Optionally navigate back if unfavorited
+        navigation.goBack();
+      } else {
+        addFavorite(quote.id);
+      }
+    } catch (error) {
+      console.error('Error toggling favorite:', error);
+      Alert.alert(
+        'Error',
+        'Unable to update favorites. Please try again.',
+        [{ text: 'OK' }]
+      );
     }
   };
 
   const handleShare = async () => {
     try {
-      await Share.share({
+      const result = await Share.share({
         message: `"${quote.text}"\n\n- ${quote.author}`,
       });
+
+      // Note: result.action is only available on some platforms
+      if (result.action === Share.dismissedAction) {
+        // User dismissed the share dialog
+        console.log('Share dismissed');
+      }
     } catch (error) {
       console.error('Error sharing quote:', error);
+      Alert.alert(
+        'Share Failed',
+        'Unable to share this quote. Please try again.',
+        [{ text: 'OK' }]
+      );
     }
   };
 
